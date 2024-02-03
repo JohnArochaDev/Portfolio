@@ -73,3 +73,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 Refrence: https://heberleonard2.github.io/terminal-style-portfolio-page/
 
 ref terminal: https://hackaday.com/2023/08/23/linux-fu-the-old-school-terminal/
+
+Plan: Step 1: Black sides, left right. green hue in middle, stark contrast, everythingon now in a new component.

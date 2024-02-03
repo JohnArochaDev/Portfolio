@@ -1,15 +1,9 @@
 import './App.css';
+import Terminal from '../components/Terminal/Terminal'
 import { ReactTyped } from "react-typed";
 
-const App = () => {
+export default function App() {
   return (
-    <div>
-      <p className="text" >
-        Welcome to{" "}
-        <ReactTyped strings={["My React App"]} typeSpeed={100} />
-      </p>
-    </div>
+    <Terminal />
   );
 };
-
-export default App;
