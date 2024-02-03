@@ -1,6 +1,7 @@
 input {
   border: none;
-  background: #030C08;
+  background: transparent;
+  width: 100vh;
 }
 
 input:focus {
@@ -14,7 +15,7 @@ input.middle:focus {
 
 .input {
   position: absolute;
-  padding-top: 5vh;
+  padding-top: 2vh;
   left: 17vh;
 }
 
