@@ -1,0 +1,13 @@
+input {
+  border: none;
+  width: 100%;
+}
+
+input:focus {
+  border: transparent;
+  outline-width: 0;
+}
+
+input.middle:focus {
+  outline-width: 0;
+}
