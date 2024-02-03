@@ -1,6 +1,6 @@
 input {
   border: none;
-  width: 100%;
+  background: #030C08;
 }
 
 input:focus {
@@ -10,4 +10,14 @@ input:focus {
 
 input.middle:focus {
   outline-width: 0;
+}
+
+.input {
+  position: absolute;
+  padding-top: 5vh;
+  left: 17vh;
+}
+
+input.inputBack {
+  text-align: left;
 }

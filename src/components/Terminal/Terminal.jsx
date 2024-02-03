@@ -4,12 +4,12 @@ import { ReactTyped } from "react-typed";
 
 export default function Terminal() {
   return (
-    <div>
+    <div className="terminal">
       <p className="text" >
         My name is {" "}
         <ReactTyped strings={["John Arocha"]} typeSpeed={75} />
       </p>
-    <Input />
+      <Input />
     </div>
   );
 };

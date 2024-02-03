@@ -7,17 +7,16 @@
 *{
   font-family: "terminal";
   text-shadow : horizontal-shadow vertical-shadow blur color;
-  background: #030C08;
   color:#0B9F52;
   text-shadow:0px 0px 13px #0b8647, 0px 0px 13px #3f3f3f;
   text-align:center;
 }
 
-.text {
-  font-size: 30px;
+body {
+  background-color: black;
 }
 
 .App {
-  text-align: center;
-  font-family: "terminal";
+  display: flex;
+  justify-content: center;
 }

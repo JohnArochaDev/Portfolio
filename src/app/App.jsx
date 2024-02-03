@@ -4,6 +4,8 @@ import { ReactTyped } from "react-typed";
 
 export default function App() {
   return (
-    <Terminal />
+    <div className="App">
+      <Terminal />
+    </div>
   );
 };
