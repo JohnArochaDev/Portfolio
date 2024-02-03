@@ -4,10 +4,10 @@ import { ReactTyped } from "react-typed";
 const App = () => {
   return (
     <div>
-      <h1>
+      <p className="text" >
         Welcome to{" "}
-        <ReactTyped strings={["My React App"]} typeSpeed={100} loop />
-      </h1>
+        <ReactTyped strings={["My React App"]} typeSpeed={100} />
+      </p>
     </div>
   );
 };
