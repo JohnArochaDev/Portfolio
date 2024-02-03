@@ -1,7 +1,15 @@
 import './App.css';
+import { ReactTyped } from "react-typed";
 
-export default function App() {
+const App = () => {
   return (
-    <h1>Hello!</h1>
+    <div>
+      <h1>
+        Welcome to{" "}
+        <ReactTyped strings={["My React App"]} typeSpeed={100} loop />
+      </h1>
+    </div>
   );
-}
+};
+
+export default App;
