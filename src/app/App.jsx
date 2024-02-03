@@ -4,7 +4,7 @@ import { ReactTyped } from "react-typed";
 
 export default function App() {
   return (
-    <div className="App cristal scanline">
+    <div className="App scanline">
       <Terminal />
     </div>
   );

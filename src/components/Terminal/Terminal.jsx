@@ -4,7 +4,7 @@ import { ReactTyped } from "react-typed";
 
 export default function Terminal() {
   return (
-    <div className="terminal">
+    <div className="terminal cristal">
       <p className="text" >
         My name is {" "}
         <ReactTyped strings={["John Arocha"]} typeSpeed={75} />
