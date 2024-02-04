@@ -7,6 +7,6 @@ export default function Input() {
   }
   //Remove above code inf necessary in the future
   return (
-    <p className="input"> {'>'} <input className="inputBack" type="text" autoFocus={true} /></p>
+    <p className="input">➜ <input className="inputBack" type="text" autoFocus={true} /></p>
   )
 }

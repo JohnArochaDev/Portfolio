@@ -20,16 +20,24 @@
   animation: textShadow 0.15s infinite;
 }
 
+img {
+  z-index: 10;
+  position: absolute;
+  size: fill;
+  height: 100vh;
+  width: fill;
+} 
+
 body {
   background-color: black;
   background-image: radial-gradient(200% 250% at center, rgba(0, 50, 50, 0.75), black 100%);
-  
-  
+  overflow: hidden;
 }
 
 .App {
   display: flex;
   justify-content: center;
+  /* background-image: url('../photos/crt_green_mask.png'); */
 }
 
 @keyframes textShadow {

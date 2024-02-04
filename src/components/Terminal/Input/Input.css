@@ -15,10 +15,12 @@ input.middle:focus {
 
 .input {
   position: absolute;
-  padding-top: 2vh;
-  left: 17vh;
+  left:2vh;
+  font-size: 20px;
 }
 
 input.inputBack {
   text-align: left;
+  padding-left:2vh;
+  font-size: 25px;
 }
