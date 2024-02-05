@@ -31,6 +31,23 @@ export default function Terminal() {
 
   const [userInput, setUserInput] = useState([])
 
+
+  let val = [
+    ['\u00A0              _.-"""""-._ '],
+    ['\u00A0             / .--.....-.\ '],
+    ['\u00A0            / /          \\ '],
+    ['\u00A0            ||           || '],
+    ['\u00A0            ||  .--.  .--|/ '],
+    ['\u00A0            /`       \   | '],
+    ['\u00A0            \_       _)  | '],
+    ['\u00A0             |    ,____, ; '],
+    ["\u00A0             | \   `--' / "],
+    ["\u00A0          _./\  '.____.' "],
+    ['\u00A0       _.:::| `\      |\:._'],
+    ["\u00A0     .::::::::`\ '.   / /::::."],
+    ['\u00A0    /jgs::::::::|/::\/:\|:::::\ '],
+  ]
+  console.log(val)
   return (
     <div className="terminal cristal">
       <p className="text" >

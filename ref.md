@@ -75,3 +75,33 @@ Refrence: https://heberleonard2.github.io/terminal-style-portfolio-page/
 ref terminal: https://hackaday.com/2023/08/23/linux-fu-the-old-school-terminal/
 
 Plan: Step 1: Black sides, left right. green hue in middle, stark contrast, everythingon now in a new component.
+
+              _.-"""""-._ 
+             / .--.....-.\
+            / /          \\
+            ||           ||
+            ||  .--.  .--|/
+            /`    .  \ . |
+            \_       _)  |
+             |    ,____, ;
+             | \   `--' /
+          _./\  '.____.'
+       _.:::| `\      |\:._
+     .::::::::`\ '.   / /::::.
+    /jgs::::::::|/::\/:\|:::::\ 
+
+
+
+['              _.-"""""-._ ']
+['             / .--.....-.\']
+['            / /          \\']
+['            ||           ||']
+['            ||  .--.  .--|/']
+['            /`    .  \ . |']
+['            \_       _)  |']
+['             |    ,____, ;']
+['             | \   `--' /']
+['          _./\  '.____.'']
+['       _.:::| `\      |\:._']
+['     .::::::::`\ '.   / /::::.']
+['    /jgs::::::::|/::\/:\|:::::\ ']
