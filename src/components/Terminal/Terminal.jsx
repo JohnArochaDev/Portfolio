@@ -45,6 +45,7 @@ export default function Terminal() {
         setCanText={setCanText}
         userInput={userInput}
         setUserInput={setUserInput}
+        codes={codes}
       />
     </div>
   );

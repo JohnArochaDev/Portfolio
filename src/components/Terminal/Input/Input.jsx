@@ -2,7 +2,12 @@ import { useEffect } from 'react';
 import { useRef } from 'react';
 import './Input.css'
 
-export default function Input({ text, setText, canText, setCanText, userInput, setUserInput }) {
+export default function Input({ text, setText, canText, setCanText, userInput, setUserInput, codes }) {
+  
+  document.onmousedown = (e) => { // This prevents mouse clicking!!
+    e.preventDefault();
+  } //Remove above code inf necessary in the future
+  
   const inputRef = useRef(null);
   let value = ''
 
@@ -12,9 +17,20 @@ export default function Input({ text, setText, canText, setCanText, userInput, s
     // Do something with the value
   }
 
-  document.onmousedown = (e) => { // This prevents mouse clicking!!
-    e.preventDefault();
-  } //Remove above code inf necessary in the future
+  function codeCheck(a, b) {
+    return JSON.stringify(a) === JSON.stringify(b);
+  };
+
+  //write a forEach function that iterates through codes and looks for help with .find
+  let codex
+
+codes[0].find((code) => {
+  if (code == 'help') {
+    return codex = true
+  }
+})
+
+console.log('codex is ',codex)
 
   useEffect(() => {
     function listener(e) {
@@ -27,9 +43,6 @@ export default function Input({ text, setText, canText, setCanText, userInput, s
       }
     };
     document.addEventListener("keydown", listener);
-    // return () => {
-    //   document.removeEventListener("keydown", listener);
-    // };
   }, [value, text, setText]);
 
   return (
