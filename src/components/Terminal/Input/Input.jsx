@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useRef } from 'react';
 import './Input.css'
 
-export default function Input({ text, setText, userInput, canText, setCanText,  setUserInput, codes }) {
+export default function Input({ text, setText, userInput, setUserInput, canText, setCanText, codes }) {
   
   document.onmousedown = (e) => { // This prevents mouse clicking!!
     e.preventDefault();
@@ -82,10 +82,11 @@ export default function Input({ text, setText, userInput, canText, setCanText,  
         console.log(value)
         console.log(text)
         setText([...text, [], [value]])
+        setUserInput([value])
       }
     };
     document.addEventListener("keydown", listener);
-  }, [value, text, setText]);
+  }, [value, text, setText, setUserInput, userInput, setCanText, canText, codes, codex]);
 
   return (
     <p className="input">➜ <input ref={inputRef} onChange={handleChange} className="inputBack" type="text" autoFocus={true} /></p>
