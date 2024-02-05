@@ -14,6 +14,19 @@ export default function Terminal() {
     ['If you feel lost type: help']
   ])
 
+  const [codes, setCodes] = useState([
+    ['help'],
+    ['all'],
+    ['projects'],
+    ['projects 1'],
+    ['projects 2'],
+    ['projects 3'],
+    ['about me'],
+    ['npm i'],
+    ['hire me'],
+    ['clear'],
+  ])
+
   const [canText, setCanText] = useState([false])
 
   const [userInput, setUserInput] = useState([])
