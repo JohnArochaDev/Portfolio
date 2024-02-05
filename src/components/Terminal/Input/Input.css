@@ -14,9 +14,11 @@ input.middle:focus {
 }
 
 .input {
-  position: absolute;
-  left:2vh;
+  /* position: absolute; */
+  text-align: left;
+  margin-left: 2vh;
   font-size: 10x;
+  margin-top: .5vh;
 }
 
 input.inputBack {
