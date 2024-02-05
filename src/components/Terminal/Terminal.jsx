@@ -29,9 +29,6 @@ export default function Terminal() {
 
   const [canText, setCanText] = useState([false])
 
-  // const [userInput, setUserInput] = useState([
-  //   ['help']
-  // ])
   const [userInput, setUserInput] = useState(['help'])
 
   return (

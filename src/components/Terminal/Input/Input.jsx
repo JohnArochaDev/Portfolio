@@ -21,59 +21,6 @@ export default function Input({ text, setText, userInput, canText, setCanText,  
     return JSON.stringify(a) === JSON.stringify(b);
   };
 
-
-  // let codex
-  // let i = 0
-  // userInput.forEach((c) => {
-  //   c.find((code) => {
-  //     if (code === 'help') {
-  //       // Run code below
-  //       codex = true;
-  //       return true;
-  //     }else if (code === 'all') {
-  //       // Run code below
-  //       codex = true;
-  //       return true;
-  //     }else if (code === 'projects') {
-  //       // Run code below
-  //       codex = true;
-  //       return true;
-  //     }else if (code === 'projects 1') {
-  //       // Run code below
-  //       codex = true;
-  //       return true;
-  //     }else if (code === 'projects 2') {
-  //       // Run code below
-  //       codex = true;
-  //       return true;
-  //     }else if (code === 'projects 3') {
-  //       // Run code below
-  //       codex = true;
-  //       return true;
-  //     }else if (code === 'about me') {
-  //       // Run code below
-  //       codex = true;
-  //       return true;
-  //     }else if (code === 'npm i') {
-  //       // Run code below
-  //       codex = true;
-  //       return true;
-  //     }else if (code === 'hire me') {
-  //       // Run code below
-  //       codex = true;
-  //       return true;
-  //     }else if (code === 'clear') {
-  //       // Run code below
-  //       codex = true;
-  //       return true;
-  //     }
-  //     i++;
-  //   });
-  //   if (!codex) {
-  //     codex = false;
-  //     return false
-  //   }
-  // });
   //write a forEach function that iterates through codes and looks for help with .find
   let codex
 
