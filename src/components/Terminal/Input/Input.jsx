@@ -4,7 +4,6 @@ import './Input.css'
 
 export default function Input() {
   const inputRef = useRef(null);
-
   let value = ''
 
   function handleChange() {
@@ -13,11 +12,9 @@ export default function Input() {
     console.log(value)
   }
 
-  // This prevents mouse clicking!!
-  document.onmousedown = (e) => {
+  document.onmousedown = (e) => { // This prevents mouse clicking!!
     e.preventDefault();
-  }
-  //Remove above code inf necessary in the future
+  } //Remove above code inf necessary in the future
 
   useEffect(() => {
     function listener(e) {
