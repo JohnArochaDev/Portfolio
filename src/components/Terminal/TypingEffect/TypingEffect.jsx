@@ -34,8 +34,6 @@ export default function TypingEffect({ textArrays, typingSpeed = 50 }) {
     // No else part needed here to stop because we automatically stop when arrayIndex >= textArrays.length
   }, [charIndex, stringIndex, arrayIndex, textArrays, typingSpeed, currentText]);
 
-  console.log(textArrays[0][0])
-
   return (
     <div>
       {completedTexts.map((text, index) => (

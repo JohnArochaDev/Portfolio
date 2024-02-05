@@ -21,7 +21,7 @@ export default function Terminal() {
         <ReactTyped strings={["John Arocha"]} typeSpeed={75} />
       </p>
       <TypingEffect textArrays={text}/>
-      <Input />
+      <Input text={text} setText={setText} />
     </div>
   );
 };

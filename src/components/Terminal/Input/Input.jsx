@@ -2,14 +2,13 @@ import { useEffect } from 'react';
 import { useRef } from 'react';
 import './Input.css'
 
-export default function Input() {
+export default function Input({ text, setText }) {
   const inputRef = useRef(null);
   let value = ''
 
   function handleChange() {
     value = inputRef.current.value;
     // Do something with the value
-    console.log(value)
   }
 
   document.onmousedown = (e) => { // This prevents mouse clicking!!
@@ -21,7 +20,9 @@ export default function Input() {
       if (e.code === "Enter" || e.code === "NumpadEnter") {
         console.log("Enter key was pressed. Run your function.");
         e.preventDefault();
-        // callMyFunction();
+        console.log(value)
+        console.log(text)
+        setText([...text, [value]])
       }
     };
     document.addEventListener("keydown", listener);
