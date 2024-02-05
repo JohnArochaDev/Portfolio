@@ -21,10 +21,8 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
     return JSON.stringify(a) === JSON.stringify(b);
   };
 
-  //write a forEach function that iterates through codes and looks for help with .find
-  let codex
-
-  userInput.find((code) => {
+  let codex // for testing purpouses, use this to find boolean values from userInput
+  userInput.find((code) => {  //write a function that looks through userInput with .find
     if (code === 'help') {
       // Run code below
       codex = true;
