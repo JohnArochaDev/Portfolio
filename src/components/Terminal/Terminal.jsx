@@ -14,6 +14,10 @@ export default function Terminal() {
     ['If you feel lost type: help']
   ])
 
+  const [canText, setCanText] = useState([false])
+
+  const [userInput, setUserInput] = useState([])
+
   return (
     <div className="terminal cristal">
       <p className="text" >
@@ -21,7 +25,14 @@ export default function Terminal() {
         <ReactTyped strings={["John Arocha"]} typeSpeed={75} />
       </p>
       <TypingEffect textArrays={text}/>
-      <Input text={text} setText={setText} />
+      <Input 
+        text={text} 
+        setText={setText} 
+        canText={canText} 
+        setCanText={setCanText}
+        userInput={userInput}
+        setUserInput={setUserInput}
+      />
     </div>
   );
 };

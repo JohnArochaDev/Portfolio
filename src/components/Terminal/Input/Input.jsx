@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useRef } from 'react';
 import './Input.css'
 
-export default function Input({ text, setText }) {
+export default function Input({ text, setText, canText, setCanText, userInput, setUserInput }) {
   const inputRef = useRef(null);
   let value = ''
 
