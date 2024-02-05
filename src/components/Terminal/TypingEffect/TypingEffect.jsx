@@ -41,7 +41,7 @@ export default function TypingEffect({ textArrays, typingSpeed = 50 }) {
       {completedTexts.map((text, index) => (
         <div className='tText' key={index}>➜ {text}<br /><br /></div>
       ))}
-      <div className='tText'>{currentText ? '➜ ' : ''}{currentText}</div> {/* Display the currently typing text */}
+      <div className='tText' >{currentText ? '➜ ' : ''}{currentText}</div> {/* Display the currently typing text */}
     </div>
   );
 };
