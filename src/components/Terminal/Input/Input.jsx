@@ -8,6 +8,7 @@ export default function Input({ text, setText }) {
 
   function handleChange() {
     value = inputRef.current.value;
+    value.toLowerCase()
     // Do something with the value
   }
 
@@ -22,14 +23,14 @@ export default function Input({ text, setText }) {
         e.preventDefault();
         console.log(value)
         console.log(text)
-        setText([...text, [value]])
+        setText([...text, [], [value]])
       }
     };
     document.addEventListener("keydown", listener);
-    return () => {
-      document.removeEventListener("keydown", listener);
-    };
-  }, []);
+    // return () => {
+    //   document.removeEventListener("keydown", listener);
+    // };
+  }, [value, text, setText]);
 
   return (
     <p className="input">➜ <input ref={inputRef} onChange={handleChange} className="inputBack" type="text" autoFocus={true} /></p>
