@@ -38,13 +38,6 @@ export default function Terminal() {
     }
   });
 
-  // useEffect(() => { 
-  //   if (text.length > 20){
-  //     document.querySelector('.scrollIntoView').scrollIntoView(false) // ASK ABOUT THIS, WHY DOESNT IT WORK
-  //   }
-
-  // }, [text, setText])
-
   return (
     <div className="terminal cristal">
       <p className="text" >
