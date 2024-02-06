@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './TypingEffect.css'
 
-export default function TypingEffect({ setCompletedTexts, completedTexts, textArrays, currentText, setCurrentText, arrayIndex, setArrayIndex, stringIndex, setStringIndex, charIndex, setCharIndex, typingSpeed = 10 }) {
+export default function TypingEffect({ setCompletedTexts, completedTexts, textArrays, currentText, setCurrentText, arrayIndex, setArrayIndex, stringIndex, setStringIndex, charIndex, setCharIndex, typingSpeed = 5 }) {
 
   useEffect(() => {
     if (arrayIndex < textArrays.length) {
@@ -18,7 +18,7 @@ export default function TypingEffect({ setCompletedTexts, completedTexts, textAr
             setCurrentText(''); // Reset currentText for the next string
             setCharIndex(0); // Reset charIndex for the next string
             setStringIndex(stringIndex + 1); // Move to the next string
-          }, 200); // Adjust pause time as needed
+          }, 100); // Adjust pause time as needed
         }
       } else {
         // Move to the next array of strings
