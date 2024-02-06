@@ -12,8 +12,11 @@ export default function Terminal() {
   const [stringIndex, setStringIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
 
+// \u00A0 = 1 empty space
+
   const [text, setText] = useState([
     [],
+    ['          i'],
     ['Welcome'],
     ['Type in a command to get started'],
     ['If you feel lost type: help']
