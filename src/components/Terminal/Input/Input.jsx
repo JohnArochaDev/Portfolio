@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRef } from 'react';
 import './Input.css'
 
-export default function Input({ text, setText, userInput, setUserInput, canText, setCanText, codes }) {
+export default function Input({ text, setText, userInput, setUserInput, canText, setCanText, codes, completedTexts, setCompletedTexts}) {
 
   document.onmousedown = (e) => { // This prevents mouse clicking!!
     e.preventDefault();
@@ -71,7 +71,9 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
             return true;
           case 'clear':
             // Run code below
-  
+            setCompletedTexts(['If you feel lost type: help'])
+            setText(['If you feel lost type: help'])
+            console.log(text)
             return true;
           default:
             codex = false;
@@ -95,6 +97,7 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
         }, 500);
       }
     };
+    console.log(text)
     document.addEventListener("keydown", listener);
     return () => {
       document.removeEventListener("keydown", listener);

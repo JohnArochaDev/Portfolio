@@ -7,6 +7,8 @@ import { useState } from "react";
 
 export default function Terminal() {
 
+  const [completedTexts, setCompletedTexts] = useState([]);
+
   const [text, setText] = useState([
     [],
     ['Welcome'],
@@ -37,7 +39,7 @@ export default function Terminal() {
         My name is {" "}
         <ReactTyped strings={["John Arocha"]} typeSpeed={75} />
       </p>
-      <TypingEffect textArrays={text}/>
+      <TypingEffect completedTexts={completedTexts} setCompletedTexts={setCompletedTexts} textArrays={text}/>
       <Input 
         text={text} 
         setText={setText} 
@@ -46,6 +48,8 @@ export default function Terminal() {
         userInput={userInput}
         setUserInput={setUserInput}
         codes={codes}
+        completedTexts={completedTexts} 
+        setCompletedTexts={setCompletedTexts}
       />
     </div>
   );
