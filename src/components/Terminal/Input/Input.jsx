@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRef } from 'react';
 import './Input.css'
 
-export default function Input({ text, setText, userInput, setUserInput, canText, setCanText, codes, completedTexts, setCompletedTexts}) {
+export default function Input({ text, setText, userInput, setUserInput, canText, setCanText, codes, setCompletedTexts, completedTexts, textArrays, currentText, setCurrentText, arrayIndex, setArrayIndex, stringIndex, setStringIndex, charIndex, setCharIndex,}) {
 
   document.onmousedown = (e) => { // This prevents mouse clicking!!
     e.preventDefault();
@@ -43,36 +43,40 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
             return true;
           case 'projects':
             // Run code below
-  
+            
             return true;
           case 'projects 1':
             // Run code below
-  
+            
             return true;
           case 'projects 2':
             // Run code below
-  
+            
             return true;
           case 'projects 3':
             // Run code below
-  
+            
             return true;
           case 'about me':
             // Run code below
-  
+            
             return true;
           case 'npm i':
             // Run code below
-  
+            
             return true;
           case 'hire me':
             // Run code below
-  
+            
             return true;
           case 'clear':
             // Run code below
             setCompletedTexts(['If you feel lost type: help'])
             setText(['If you feel lost type: help'])
+            setCurrentText('')
+            setArrayIndex(1)
+            setStringIndex(0)
+            setCharIndex(0)
             console.log(text)
             return true;
           default:
@@ -90,6 +94,7 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
       if (e.code === "Enter" || e.code === "NumpadEnter") {
         e.preventDefault();
         setText([...text, [], userInput])
+        // setCompletedTexts([...completedTexts, userInput])
         checkCode(userInput)
         setUserInput([value])
         setTimeout(() => {// on a timer, clears out the value of the input

@@ -8,6 +8,10 @@ import { useState } from "react";
 export default function Terminal() {
 
   const [completedTexts, setCompletedTexts] = useState([]);
+  const [currentText, setCurrentText] = useState('');
+  const [arrayIndex, setArrayIndex] = useState(0);
+  const [stringIndex, setStringIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
 
   const [text, setText] = useState([
     [],
@@ -39,7 +43,18 @@ export default function Terminal() {
         My name is {" "}
         <ReactTyped strings={["John Arocha"]} typeSpeed={75} />
       </p>
-      <TypingEffect completedTexts={completedTexts} setCompletedTexts={setCompletedTexts} textArrays={text}/>
+      <TypingEffect completedTexts={completedTexts}
+       setCompletedTexts={setCompletedTexts}
+        textArrays={text}
+        currentText={currentText}
+        setCurrentText={setCurrentText}
+        arrayIndex={arrayIndex}
+        setArrayIndex={setArrayIndex}
+        stringIndex={stringIndex}
+        setStringIndex={setStringIndex}
+        charIndex={charIndex}
+        setCharIndex={setCharIndex}
+        />
       <Input 
         text={text} 
         setText={setText} 
@@ -50,6 +65,14 @@ export default function Terminal() {
         codes={codes}
         completedTexts={completedTexts} 
         setCompletedTexts={setCompletedTexts}
+        currentText={currentText}
+        setCurrentText={setCurrentText}
+        arrayIndex={arrayIndex}
+        setArrayIndex={setArrayIndex}
+        stringIndex={stringIndex}
+        setStringIndex={setStringIndex}
+        charIndex={charIndex}
+        setCharIndex={setCharIndex}
       />
     </div>
   );

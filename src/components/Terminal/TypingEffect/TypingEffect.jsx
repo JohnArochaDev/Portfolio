@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './TypingEffect.css'
 
-export default function TypingEffect({ setCompletedTexts, completedTexts, textArrays, typingSpeed = 10 }) {
-
-  const [currentText, setCurrentText] = useState('');
-  const [arrayIndex, setArrayIndex] = useState(0);
-  const [stringIndex, setStringIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
+export default function TypingEffect({ setCompletedTexts, completedTexts, textArrays, currentText, setCurrentText, arrayIndex, setArrayIndex, stringIndex, setStringIndex, charIndex, setCharIndex, typingSpeed = 10 }) {
 
   useEffect(() => {
     if (arrayIndex < textArrays.length) {
