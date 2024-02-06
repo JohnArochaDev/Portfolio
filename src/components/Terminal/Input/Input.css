@@ -24,5 +24,5 @@ input.middle:focus {
 input.inputBack {
   text-align: left;
   padding-left:2vh;
-  /* font-size: 10px; */
+  padding-bottom: 50vh;
 }
