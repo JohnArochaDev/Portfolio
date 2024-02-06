@@ -39,8 +39,7 @@ export default function Terminal() {
   return (
     <div className="terminal cristal">
       <p className="text" >
-        My name is {" "}
-        <ReactTyped strings={["John Arocha"]} typeSpeed={75} />
+        Hello! My name is John Arocha
       </p>
       <TypingEffect completedTexts={completedTexts}
        setCompletedTexts={setCompletedTexts}

@@ -35,6 +35,8 @@ body {
 }
 
 .App {
+  overflow-y: scroll;
+  overflow-y: auto;
   display: flex;
   justify-content: center;
   /* background-image: url('../photos/crt_green_mask.png'); */
