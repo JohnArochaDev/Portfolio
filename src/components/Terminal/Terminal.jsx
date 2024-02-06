@@ -14,12 +14,28 @@ export default function Terminal() {
 
 // \u00A0 = 1 empty space
 
+  // const [text, setText] = useState([
+  //   [],
+  //   ['          i'],
+  //   ['Welcome'],
+  //   ['Type in a command to get started'],
+  //   ['If you feel lost type: help']
+  // ])
+
   const [text, setText] = useState([
-    [],
-    ['          i'],
-    ['Welcome'],
-    ['Type in a command to get started'],
-    ['If you feel lost type: help']
+    ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 _.-"""""-._ '],
+    ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 /\\ \u00A0 .--.....-.\\ '],
+    ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 / \u00A0 / \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \\'],
+    ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 || \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 || '],
+    ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 || \u00A0\u00A0 .--. \u00A0\u00A0 .--|/ '],
+    ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 /` \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0 \\ \u00A0 \u00A0 | '],
+    ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \\_ \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 _) \u00A0\u00A0 | '],
+    ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 | \u00A0\u00A0\u00A0\u00A0 ,____, \u00A0 ; '],
+    ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 | \u00A0 \\ \u00A0\u00A0 `--' \u00A0 / "],
+    ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 _./\\ \u00A0\u00A0 '.____.' "],
+    ['\u00A0\u00A0\u00A0 _.:::| \u00A0 ` \\ \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 |\\:._ '],
+    ["\u00A0 .::::::::`\\ \u00A0'. \u00A0\u00A0\u00A0 / \u00A0 /::::. "],
+    ['/jgs::::::::|/::\\/:\\|:::::\\ ']
   ])
 
   const [codes, setCodes] = useState([
