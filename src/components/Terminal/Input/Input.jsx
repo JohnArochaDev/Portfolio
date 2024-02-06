@@ -45,7 +45,7 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
             return true;
           case 'projects 1':
             // Run code below
-            
+            //Add functionality where when you open a project, and old fashioned windows xp div with an iframe displays your webpage
             return true;
           case 'projects 2':
             // Run code below
