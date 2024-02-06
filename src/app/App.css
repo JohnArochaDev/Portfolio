@@ -20,11 +20,12 @@
   animation: textShadow 0.15s infinite;
 }
 
-img {
+.frame {
+  /* pointer-events: none; */
   z-index: 10;
   position: absolute;
   size: fill;
-  height: 100vh;
+  height: auto;
   width: fill;
 } 
 
@@ -35,7 +36,6 @@ body {
 }
 
 .App {
-  overflow-y: scroll;
   overflow-y: auto;
   display: flex;
   justify-content: center;
