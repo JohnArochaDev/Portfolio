@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useRef } from 'react';
 import './Input.css'
 
@@ -21,8 +21,6 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
   function codeCheck(a, b) {
     return JSON.stringify(a) === JSON.stringify(b);
   };
-
-
 
   function checkCode(userInput) {
     let codex
@@ -94,7 +92,6 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
       if (e.code === "Enter" || e.code === "NumpadEnter") {
         e.preventDefault();
         setText([...text, [], userInput])
-        // setCompletedTexts([...completedTexts, userInput])
         checkCode(userInput)
         setUserInput([value])
         setTimeout(() => {// on a timer, clears out the value of the input

@@ -2,7 +2,6 @@ import './Terminal.css';
 import Input from './Input/Input'
 import TypingEffect from './TypingEffect/TypingEffect';
 import { ReactTyped } from "react-typed";
-import { type } from '@testing-library/user-event/dist/type';
 import { useState } from "react";
 
 export default function Terminal() {
