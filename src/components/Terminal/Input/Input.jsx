@@ -25,15 +25,45 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
         switch (code) {
           case 'help':
             // Run code below
-            codex = true;
-            console.log(codex)
+            setText([...text, 
+              ['\u00A0\u00A0'],
+              ['\u00A0\u00A0'],
+              ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Welcome to my virtual command center! This mock terminal is your gateway to"],
+              ["\u00A0\u00A0\u00A0exploring my digital portfolio. Type 'help' to discover the available commands and "],
+              ["\u00A0\u00A0\u00A0navigate through my work and background. Whether you're interested in viewing my "],
+              ["\u00A0\u00A0\u00A0projects ('work'), learning more about me ('about'), or getting in touch ('contact'), this "],
+              ["\u00A0\u00A0\u00A0interactive platform is designed to showcase my journey as a full-stack web developer "],
+              ["\u00A0\u00A0\u00A0and former 3D artist. Dive in and enjoy the personalized experience!"],
+              ["\u00A0\u00A0\u00A0"],
+              ["\u00A0\u00A0\u00A0Type 'all' to see all available commands"],
+            ])
+
             return true;
+
           case 'all':
             // Run code below
             codex = true;
-            console.log(codex)
-            console.log(text)
-            setText([...text, ['about me'], ['help'], ['all'], ['projects'], ['projects 1'], ['projects 2'], ['projects 3'], ['npm i'], ['hire me'], ['clear'],]) 
+            setText([...text, ['about me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- A little about me and a list of my skills'],
+            // ['\u00A0\u00A0'],
+            ['help \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display help'],
+            // ['\u00A0\u00A0'],
+            ['all \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display all commands'],
+            // ['\u00A0\u00A0'],
+            ['projects \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display projects'],
+            // ['\u00A0\u00A0'],
+            ['projects 1 \u00A0\u00A0\u00A0\u00A0-- open project 1'],
+            // ['\u00A0\u00A0'],
+            ['projects 2 \u00A0\u00A0\u00A0\u00A0-- open project 2'],
+            // ['\u00A0\u00A0'],
+            ['projects 3 \u00A0\u00A0\u00A0\u00A0-- open project 3'],
+            // ['\u00A0\u00A0'],
+            ['npm i \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
+            // ['\u00A0\u00A0'],
+            ['hire me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me!'],
+            // ['\u00A0\u00A0'],
+            ['clear \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- clear console'],
+          ]) 
+
             return true;
 
           case 'projects':
@@ -72,6 +102,7 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
               ["\u00A0.::::::::`\\\u00A0'.\u00A0\u00A0\u00A0/\u00A0/::::."],
               ['/jgs::::::::|/::\\/:\\|:::::\\'],
               ['\u00A0\u00A0'],
+              ['\u00A0\u00A0\u00A0About Me:'],
               ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Hello, I'm John Arocha, a full-stack web developer and General Assembly graduate "],
               ["\u00A0\u00A0\u00A0with a background as a 3D artist. My journey from the visual arts to software "],
               ["\u00A0\u00A0\u00A0engineering brings a creative edge and meticulous attention to detail to my work. As a "],
