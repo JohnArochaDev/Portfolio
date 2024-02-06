@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './TypingEffect.css'
 
-export default function TypingEffect({ textArrays, typingSpeed = 50 }) {
+export default function TypingEffect({ textArrays, typingSpeed = 25 }) {
   const [completedTexts, setCompletedTexts] = useState([]);
   const [currentText, setCurrentText] = useState('');
   const [arrayIndex, setArrayIndex] = useState(0);
@@ -23,7 +23,7 @@ export default function TypingEffect({ textArrays, typingSpeed = 50 }) {
             setCurrentText(''); // Reset currentText for the next string
             setCharIndex(0); // Reset charIndex for the next string
             setStringIndex(stringIndex + 1); // Move to the next string
-          }, 1000); // Adjust pause time as needed
+          }, 500); // Adjust pause time as needed
         }
       } else {
         // Move to the next array of strings

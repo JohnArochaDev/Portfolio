@@ -36,7 +36,10 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
             return true;
           case 'all':
             // Run code below
-  
+            codex = true;
+            console.log(codex)
+            console.log(text)
+            setText([...text, ['about me'], ['help'], ['all'], ['projects'], ['projects 1'], ['projects 2'], ['projects 3'], ['npm i'], ['hire me'], ['clear'],]) 
             return true;
           case 'projects':
             // Run code below
@@ -83,9 +86,9 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
   useEffect(() => {
     function listener(e) {
       if (e.code === "Enter" || e.code === "NumpadEnter") {
-        checkCode(userInput)
         e.preventDefault();
-        setText([...text, [], [userInput]])
+        setText([...text, [], userInput])
+        checkCode(userInput)
         setUserInput([value])
         setTimeout(() => {// on a timer, clears out the value of the input
           setUserInput([''])
