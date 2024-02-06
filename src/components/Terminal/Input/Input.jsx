@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useRef } from 'react';
+import ASCAIIArt from '../ASCIIArt/ASCAIIArt';
 import './Input.css'
 
 export default function Input({ text, setText, userInput, setUserInput, canText, setCanText, codes, setCompletedTexts, completedTexts, textArrays, currentText, setCurrentText, arrayIndex, setArrayIndex, stringIndex, setStringIndex, charIndex, setCharIndex,}) {
@@ -57,8 +58,8 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
             return true;
           case 'about me':
             // Run code below
-            
-            return true;
+            <ascAIIArt/>
+            return true
           case 'npm i':
             // Run code below
             
