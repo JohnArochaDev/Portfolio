@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useRef } from 'react';
-import ASCAIIArt from '../ASCIIArt/ASCAIIArt';
 import './Input.css'
 
 export default function Input({ text, setText, userInput, setUserInput, canText, setCanText, codes, setCompletedTexts, completedTexts, textArrays, currentText, setCurrentText, arrayIndex, setArrayIndex, stringIndex, setStringIndex, charIndex, setCharIndex,}) {
@@ -19,10 +18,6 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
     // Do something with the value
   }
 
-  function codeCheck(a, b) {
-    return JSON.stringify(a) === JSON.stringify(b);
-  };
-
   function checkCode(userInput) {
     let codex
     userInput.find((code) => {  //write a function that looks through userInput with .find
@@ -40,26 +35,44 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
             console.log(text)
             setText([...text, ['about me'], ['help'], ['all'], ['projects'], ['projects 1'], ['projects 2'], ['projects 3'], ['npm i'], ['hire me'], ['clear'],]) 
             return true;
+
           case 'projects':
             // Run code below
             
             return true;
+
           case 'projects 1':
             // Run code below
             //Add functionality where when you open a project, and old fashioned windows xp div with an iframe displays your webpage
             return true;
+
           case 'projects 2':
             // Run code below
             
             return true;
+
           case 'projects 3':
             // Run code below
             
             return true;
+
           case 'about me':
             // Run code below
-            <ascAIIArt/>
+            setText([...text, ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0_.-"""""-._'],
+      ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0/\\\u00A0.--.....-.\\'],
+      ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0/\u00A0/\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0|'],
+      ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0||\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0||'],
+      ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0||\u00A0\u00A0.--.\u00A0\u00A0.--|/'],
+      ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0/`\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\\\u00A0\u00A0\u00A0|'],
+      ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\\_\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0_)\u00A0\u00A0|'],
+      ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0|\u00A0\u00A0\u00A0\u00A0,____,\u00A0;'],
+      ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0|\u00A0\\\u00A0\u00A0`--'\u00A0\u00A0/"],
+      ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0_./\\\u00A0\u00A0'.____.'"],
+      ['\u00A0\u00A0\u00A0_.:::|\u00A0`\\\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0|\\:._'],
+      ["\u00A0.::::::::`\\\u00A0'.\u00A0\u00A0\u00A0/\u00A0/::::."],
+      ['/jgs::::::::|/::\\/:\\|:::::\\']])
             return true
+
           case 'npm i':
             // Run code below
             
@@ -68,6 +81,7 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
             // Run code below
             
             return true;
+
           case 'clear':
             // Run code below
             setCompletedTexts(['If you feel lost type: help'])
@@ -78,10 +92,12 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
             setCharIndex(0)
             console.log(text)
             return true;
+
           default:
             codex = false;
             console.log(codex)
             return false;
+
         }
       });
       return false
