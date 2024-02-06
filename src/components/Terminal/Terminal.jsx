@@ -1,9 +1,8 @@
 import './Terminal.css';
 import Input from './Input/Input'
 import TypingEffect from './TypingEffect/TypingEffect';
-import ASCAIIArt from './ASCIIArt/ASCAIIArt';
 import { ReactTyped } from "react-typed";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Terminal() {
 
@@ -12,33 +11,14 @@ export default function Terminal() {
   const [arrayIndex, setArrayIndex] = useState(0);
   const [stringIndex, setStringIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
-
-// \u00A0 = 1 empty space
-
+  const [canText, setCanText] = useState([false])
+  const [userInput, setUserInput] = useState([[]])
   const [text, setText] = useState([
     [],
-    ['          i'],
     ['Welcome'],
     ['Type in a command to get started'],
     ['If you feel lost type: help']
   ])
-
-  // const [text, setText] = useState([
-  //   ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 _.-"""""-._ '],
-  //   ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 /\\ \u00A0 .--.....-.\\ '],
-  //   ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 / \u00A0 / \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \\'],
-  //   ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 || \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 || '],
-  //   ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 || \u00A0\u00A0 .--. \u00A0\u00A0 .--|/ '],
-  //   ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 /` \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0 \\ \u00A0 \u00A0 | '],
-  //   ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \\_ \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 _) \u00A0\u00A0 | '],
-  //   ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 | \u00A0\u00A0\u00A0\u00A0 ,____, \u00A0 ; '],
-  //   ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 | \u00A0 \\ \u00A0\u00A0 `--' \u00A0 / "],
-  //   ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 _./\\ \u00A0\u00A0 '.____.' "],
-  //   ['\u00A0\u00A0\u00A0 _.:::| \u00A0 ` \\ \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 |\\:._ '],
-  //   ["\u00A0 .::::::::`\\ \u00A0'. \u00A0\u00A0\u00A0 / \u00A0 /::::. "],
-  //   ['/jgs::::::::|/::\\/:\\|:::::\\ ']
-  // ])
-
   const [codes, setCodes] = useState([
     ['help'],
     ['all'],
@@ -52,17 +32,27 @@ export default function Terminal() {
     ['clear'],
   ])
 
-  const [canText, setCanText] = useState([false])
+  useEffect(() => { 
+    if (text.length > 20){
+      document.querySelector('.scrollIntoView').scrollIntoView(false)
+    }
+  });
 
-  const [userInput, setUserInput] = useState([[]])
+  // useEffect(() => { 
+  //   if (text.length > 20){
+  //     document.querySelector('.scrollIntoView').scrollIntoView(false) // ASK ABOUT THIS, WHY DOESNT IT WORK
+  //   }
+
+  // }, [text, setText])
 
   return (
     <div className="terminal cristal">
       <p className="text" >
         Hello! My name is John Arocha
       </p>
-      <TypingEffect completedTexts={completedTexts}
-       setCompletedTexts={setCompletedTexts}
+      <TypingEffect
+        completedTexts={completedTexts}
+        setCompletedTexts={setCompletedTexts}
         textArrays={text}
         currentText={currentText}
         setCurrentText={setCurrentText}
@@ -92,18 +82,7 @@ export default function Terminal() {
         charIndex={charIndex}
         setCharIndex={setCharIndex}
       />
-      <ASCAIIArt />
+      <div className='scrollIntoView'></div>
     </div>
   );
 };
-
-
-
-
-
-
-
-
-
-
-
