@@ -27,17 +27,15 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             // Run code below
             setText([...text, 
               ['\u00A0\u00A0'],
-              ['\u00A0\u00A0'],
               ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Welcome to my virtual command center! This mock terminal is your gateway to"],
-              ["\u00A0\u00A0\u00A0exploring my digital portfolio. Type 'help' to discover the available commands and "],
+              ["\u00A0\u00A0\u00A0exploring my digital portfolio. Type 'about me' to learn more about me, or "],
               ["\u00A0\u00A0\u00A0navigate through my work and background. Whether you're interested in viewing my "],
-              ["\u00A0\u00A0\u00A0projects ('work'), learning more about me ('about'), or getting in touch ('contact'), this "],
+              ["\u00A0\u00A0\u00A0projects, learning more about me, or getting in touch, this "],
               ["\u00A0\u00A0\u00A0interactive platform is designed to showcase my journey as a full-stack web developer "],
               ["\u00A0\u00A0\u00A0and former 3D artist. Dive in and enjoy the personalized experience!"],
               ["\u00A0\u00A0\u00A0"],
               ["\u00A0\u00A0\u00A0Type 'all' to see all available commands"],
             ])
-
             return true;
 
           case 'all':
@@ -62,8 +60,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             ['hire me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me!'],
             // ['\u00A0\u00A0'],
             ['clear \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- clear console'],
-          ]) 
-
+          ])
             return true;
 
           case 'projects':
@@ -76,21 +73,18 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             //Add functionality where when you open a project, and old fashioned windows xp div with an iframe displays your webpage
             setUrl('https://weatherapp-ga.fly.dev/')
             setIframe(true)
-
             return true;
 
           case 'projects 2':
             // Run code below
             setUrl('https://drinks-app-t6mi.onrender.com/')
             setIframe(true)
-            
             return true;
 
           case 'projects 3':
             // Run code below
             setUrl('https://johnarochadev.github.io/Battleship/')
             setIframe(true)
-            
             return true;
 
           case 'about me':
@@ -144,7 +138,6 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             setCharIndex(0)
             setUrl('https://gifer.com/embed/fzNE')
             setIframe(null)
-            console.log(text)
             return true;
 
           default:
