@@ -2,7 +2,8 @@
   width: 90vh;
   height: 70vh;
   position: absolute;
-  border: none;
+  margin-left: 50vh;
+  margin-top: 10vh;
   background-color: #000;
   color: #fff;
   font-size: 1.5rem;
