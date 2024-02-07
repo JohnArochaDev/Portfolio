@@ -76,7 +76,7 @@ export default function Terminal() {
         charIndex={charIndex}
         setCharIndex={setCharIndex}
       />
-      <WindowsXP />
+      
       <div className='scrollIntoView'></div>
     </div>
   );

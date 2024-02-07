@@ -1,10 +1,13 @@
 .iframe {
-  width: 90vh;
-  height: 70vh;
+  width: 108vh;
+  height: 57.4vh;
   position: absolute;
-  margin-left: 50vh;
-  margin-top: 10vh;
-  background-color: #000;
+  margin-top: 12.7vh;
+
+  /* position: absolute; */
+  /* margin-left: 50vh;
+  margin-top: 10vh; */
+  /* background-color: #000;
   color: #fff;
   font-size: 1.5rem;
   box-sizing: border-box;
@@ -15,5 +18,5 @@
   line-height: 1.5;
   display: block;
   z-index: 1;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; */
 }
