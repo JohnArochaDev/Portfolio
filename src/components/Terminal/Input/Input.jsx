@@ -49,11 +49,11 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             // ['\u00A0\u00A0'],
             ['projects \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display projects'],
             // ['\u00A0\u00A0'],
-            ['projects 1 \u00A0\u00A0\u00A0\u00A0-- open project 1'],
+            ['project 1 \u00A0\u00A0\u00A0\u00A0-- open project 1'],
             // ['\u00A0\u00A0'],
-            ['projects 2 \u00A0\u00A0\u00A0\u00A0-- open project 2'],
+            ['project 2 \u00A0\u00A0\u00A0\u00A0-- open project 2'],
             // ['\u00A0\u00A0'],
-            ['projects 3 \u00A0\u00A0\u00A0\u00A0-- open project 3'],
+            ['project 3 \u00A0\u00A0\u00A0\u00A0-- open project 3'],
             // ['\u00A0\u00A0'],
             ['npm i \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
             // ['\u00A0\u00A0'],
@@ -65,24 +65,42 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
 
           case 'projects':
             // Run code below
+            //This should display info on all projects
             
             return true;
 
-          case 'projects 1':
+          case 'project 1':
+            // Run code below
+            //This should display info on the project, and open it in a new tab.
+            return true;
+
+          case 'cd project 1':
             // Run code below
             //Add functionality where when you open a project, and old fashioned windows xp div with an iframe displays your webpage
             setUrl('https://weatherapp-ga.fly.dev/')
             setIframe(true)
             return true;
 
-          case 'projects 2':
+          case 'project 2':
             // Run code below
+            //This should display info on the project, and open it in a new tab.
+            return true;
+
+          case 'cd project 2':
+            // Run code below
+            //Add functionality where when you open a project, and old fashioned windows xp div with an iframe displays your webpage
             setUrl('https://drinks-app-t6mi.onrender.com/')
             setIframe(true)
             return true;
 
-          case 'projects 3':
+          case 'project 3':
             // Run code below
+            //This should display info on the project, and open it in a new tab.
+            return true;
+
+          case 'cd project 3':
+            // Run code below
+            //Add functionality where when you open a project, and old fashioned windows xp div with an iframe displays your webpage
             setUrl('https://johnarochadev.github.io/Battleship/')
             setIframe(true)
             return true;
