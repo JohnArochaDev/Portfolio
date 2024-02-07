@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useRef } from 'react';
 import './Input.css'
 
-export default function Input({ text, setText, userInput, setUserInput, canText, setCanText, codes, setCompletedTexts, completedTexts, textArrays, currentText, setCurrentText, arrayIndex, setArrayIndex, stringIndex, setStringIndex, charIndex, setCharIndex,}) {
+export default function Input({ iFrame, setIframe, url, setUrl, text, setText, userInput, setUserInput, canText, setCanText, codes, setCompletedTexts, completedTexts, textArrays, currentText, setCurrentText, arrayIndex, setArrayIndex, stringIndex, setStringIndex, charIndex, setCharIndex,}) {
 
   document.onmousedown = (e) => { // This prevents mouse clicking!!
     e.preventDefault();
@@ -74,15 +74,22 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
           case 'projects 1':
             // Run code below
             //Add functionality where when you open a project, and old fashioned windows xp div with an iframe displays your webpage
+            setUrl('https://weatherapp-ga.fly.dev/')
+            setIframe(true)
+
             return true;
 
           case 'projects 2':
             // Run code below
+            setUrl('https://drinks-app-t6mi.onrender.com/')
+            setIframe(true)
             
             return true;
 
           case 'projects 3':
             // Run code below
+            setUrl('https://johnarochadev.github.io/Battleship/')
+            setIframe(true)
             
             return true;
 
@@ -135,6 +142,8 @@ export default function Input({ text, setText, userInput, setUserInput, canText,
             setArrayIndex(1)
             setStringIndex(0)
             setCharIndex(0)
+            setUrl('https://gifer.com/embed/fzNE')
+            setIframe(null)
             console.log(text)
             return true;
 

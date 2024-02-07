@@ -5,7 +5,7 @@ import TypingEffect from './TypingEffect/TypingEffect';
 import { ReactTyped } from "react-typed";
 import { useState, useEffect } from "react";
 
-export default function Terminal() {
+export default function Terminal({iFrame, setIframe, setUrl, url}) {
 
   const [completedTexts, setCompletedTexts] = useState([]);
   const [currentText, setCurrentText] = useState('');
@@ -75,6 +75,10 @@ export default function Terminal() {
         setStringIndex={setStringIndex}
         charIndex={charIndex}
         setCharIndex={setCharIndex}
+        url={url}
+        setUrl={setUrl}
+        iFrame={iFrame}
+        setIframe={setIframe}
       />
       
       <div className='scrollIntoView'></div>
