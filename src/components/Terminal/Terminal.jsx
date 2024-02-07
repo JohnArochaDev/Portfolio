@@ -1,5 +1,6 @@
 import './Terminal.css';
 import Input from './Input/Input'
+import WindowsXP from './WindowsXP/WindowsXP';
 import TypingEffect from './TypingEffect/TypingEffect';
 import { ReactTyped } from "react-typed";
 import { useState, useEffect } from "react";
@@ -75,6 +76,7 @@ export default function Terminal() {
         charIndex={charIndex}
         setCharIndex={setCharIndex}
       />
+      <WindowsXP />
       <div className='scrollIntoView'></div>
     </div>
   );
