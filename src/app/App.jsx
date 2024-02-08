@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
 import photo from '../photos/terminal top crop.png'
 import Terminal from '../components/Terminal/Terminal'

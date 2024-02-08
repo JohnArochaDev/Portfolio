@@ -18,6 +18,19 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
     // Do something with the value
   }
 
+  function newWindow1(){
+    // route to new page by changing window.location
+    window.open('https://weatherapp-ga.fly.dev/', "_blank") //to open new page
+ }
+  function newWindow2(){
+    // route to new page by changing window.location
+    window.open('https://drinks-app-t6mi.onrender.com/', "_blank") //to open new page
+ }
+  function newWindow3(){
+    // route to new page by changing window.location
+    window.open('https://johnarochadev.github.io/Battleship/', "_blank") //to open new page
+ }
+
   function checkCode(userInput) {
     let codex
     userInput.find((code) => {  //write a function that looks through userInput with .find
@@ -71,7 +84,22 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
 
           case 'project 1':
             // Run code below
-            //This should display info on the project, and open it in a new tab.
+            setText([...text,
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0I crafted a dynamic and user-friendly weather application that seamlessly '],
+              ['\u00A0\u00A0\u00A0integrates real-time weather information from around the world. Developed using '],
+              ['\u00A0\u00A0\u00A0Express.js, JSX, and JavaScript, the application is not only feature-rich but also mobile-friendly,'],
+              ['\u00A0\u00A0\u00A0ensuring a seamless experience across various devices. Through the clever '],
+              ['\u00A0\u00A0\u00A0integration of a weather API and Google Maps API, users can effortlessly click on the '],
+              ['\u00A0\u00A0\u00A0map to access accurate weather details for any location. The application offers full '],
+              ['\u00A0\u00A0\u00A0CRUD functionality, enabling users to save their preferred locations and assign '],
+              ['\u00A0\u00A0\u00A0personalized nicknames. This mobile-friendly weather application stands out in my '],
+              ['\u00A0\u00A0\u00A0portfolio, showcasing not only my expertise in web development and API integration '],
+              ['\u00A0\u00A0\u00A0but also a commitment to providing an accessible and enjoyable user experience '],
+              ['\u00A0\u00A0\u00A0across different devices.'],
+            ])
+            setTimeout(() => {
+            newWindow1()}, 4000)
             return true;
 
           case 'cd project 1':
@@ -83,7 +111,20 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
 
           case 'project 2':
             // Run code below
-            //This should display info on the project, and open it in a new tab.
+            setText([...text, 
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+            ])
+            newWindow2()
             return true;
 
           case 'cd project 2':
@@ -95,7 +136,20 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
 
           case 'project 3':
             // Run code below
-            //This should display info on the project, and open it in a new tab.
+            setText([...text, 
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+            ])
+            newWindow3()
             return true;
 
           case 'cd project 3':
