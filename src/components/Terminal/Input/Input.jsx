@@ -69,8 +69,6 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             // ['\u00A0\u00A0'],
             ['all \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display all commands'],
             // ['\u00A0\u00A0'],
-            ['projects \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display projects'],
-            // ['\u00A0\u00A0'],
             ['project 1 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 1'],
             // ['\u00A0\u00A0'],
             [' cd project 1 \u00A0\u00A0-- try me out!'],
@@ -95,29 +93,23 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
           ])
             return true;
 
-          case 'projects':
-            // Run code below
-            //This should display info on all projects
-            
-            return true;
-
           case 'project 1':
             // Run code below
             setText([...text,
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0The Weather App:'], 
+              ['\u00A0\u00A0\u00A0\u00A0Project 1: Weather App with Express.js, APIs, and MongoDB'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0I crafted a dynamic and user-friendly weather application that seamlessly '],
-              ['\u00A0\u00A0\u00A0integrates real-time weather information from around the world. Developed using '],
-              ['\u00A0\u00A0\u00A0Express.js, JSX, and JavaScript, the application is not only feature-rich but also mobile-friendly,'],
-              ['\u00A0\u00A0\u00A0ensuring a seamless experience across various devices. Through the clever '],
-              ['\u00A0\u00A0\u00A0integration of a weather API and Google Maps API, users can effortlessly click on the '],
-              ['\u00A0\u00A0\u00A0map to access accurate weather details for any location. The application offers full '],
-              ['\u00A0\u00A0\u00A0CRUD functionality, enabling users to save their preferred locations and assign '],
-              ['\u00A0\u00A0\u00A0personalized nicknames. This mobile-friendly weather application stands out in my '],
-              ['\u00A0\u00A0\u00A0portfolio, showcasing not only my expertise in web development and API integration '],
-              ['\u00A0\u00A0\u00A0but also a commitment to providing an accessible and enjoyable user experience '],
-              ['\u00A0\u00A0\u00A0across different devices.'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0In my first project, I crafted a dynamic and user-friendly Weather App utilizing '],
+              ['\u00A0\u00A0\u00A0\u00A0Express.js, APIs, Axios, HTML, CSS, and MongoDB. This application not only provides '],
+              ['\u00A0\u00A0\u00A0\u00A0real-time weather information for any location worldwide but also incorporates an '],
+              ['\u00A0\u00A0\u00A0\u00A0interactive map feature using the Google Maps API. Users can simply click on any '],
+              ['\u00A0\u00A0\u00A0\u00A0point on the map, and the app will display the weather details for the selected location. '],
+              ['\u00A0\u00A0\u00A0\u00A0To enhance the user experience, I implemented authentication features, ensuring '],
+              ['\u00A0\u00A0\u00A0\u00A0secure access to personalized content. Additionally, the integration with MongoDB '],
+              ['\u00A0\u00A0\u00A0\u00A0allowed for the creation of a Favorites page, where users can store and revisit their '],
+              ['\u00A0\u00A0\u00A0\u00A0preferred locations seamlessly. This project showcases my proficiency in full-stack '],
+              ['\u00A0\u00A0\u00A0\u00A0development and my ability to seamlessly integrate various technologies to create a '],
+              ['\u00A0\u00A0\u00A0\u00A0cohesive and feature-rich application.'],
             ])
             setTimeout(() => {
             newWindow1()}, 4000)
@@ -126,6 +118,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
           case 'cd project 1':
             // Run code below
             //Add functionality where when you open a project, and old fashioned windows xp div with an iframe displays your webpage
+            setText([...text, ['Would you like to be redirected to "https://weatherapp-ga.fly.dev/"? [y/n]']])
             setUrl('https://weatherapp-ga.fly.dev/')
             setIframe(true)
             return true;
@@ -133,17 +126,25 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
           case 'project 2':
             // Run code below
             setText([...text, 
-              [],
-              [],
-              [],
-              [],
-              [],
-              [],
-              [],
-              [],
-              [],
-              [],
-              [],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
+              ['\u00A0\u00A0\u00A0\u00A0Project 2: Drink Catalog App with Django, Python, and Materialize'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my second project, I ventured into the realm of web development with Django, '],
+              ['\u00A0\u00A0\u00A0\u00A0Python, and Materialize to create a feature-packed Drink Catalog App. Leveraging the '],
+              ["\u00A0\u00A0\u00A0\u00A0power of Django's backend capabilities, I seamlessly integrated an API to curate a "],
+              ['\u00A0\u00A0\u00A0\u00A0catalog featuring 636 alcoholic and non-alcoholic drinks. The application interacts '],
+              ['\u00A0\u00A0\u00A0\u00A0with a PostgreSQL database, providing a robust foundation for storing and managing '],
+              ['\u00A0\u00A0\u00A0\u00A0drink data. Using the DTL template language, I designed a sleek and intuitive interface'],
+              ['\u00A0\u00A0\u00A0\u00A0that not only displays comprehensive information about each drink, including '],
+              ['\u00A0\u00A0\u00A0\u00A0ingredients and preparation instructions but also incorporates user authentication for '],
+              ['\u00A0\u00A0\u00A0\u00A0a personalized experience.'],
+              ['\u00A0\u00A0\u00A0\u00A0'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0One standout feature of this app is its user-centric approach – users can save their '],
+              ['\u00A0\u00A0\u00A0\u00A0favorite drinks to a personalized database, allowing them to customize recipes and '],
+              ['\u00A0\u00A0\u00A0\u00A0generate convenient shopping lists for crafting their preferred beverages. This project '],
+              ['\u00A0\u00A0\u00A0\u00A0highlights my expertise in backend development, database management, and user'],
+              ['\u00A0\u00A0\u00A0\u00A0authentication, demonstrating my commitment to creating engaging and practical '],
+              ['\u00A0\u00A0\u00A0\u00A0web applications.'],
             ])
             newWindow2()
             return true;
@@ -158,17 +159,19 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
           case 'project 3':
             // Run code below
             setText([...text, 
-              [],
-              [],
-              [],
-              [],
-              [],
-              [],
-              [],
-              [],
-              [],
-              [],
-              [],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
+              ['\u00A0\u00A0\u00A0\u00A0Project 3: Battleship Game with JavaScript AI'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0In my third project, I delved into the realm of game development, creating a captivating '],
+              ['\u00A0\u00A0\u00A0\u00A0Battleship Game using JavaScript, CSS, and HTML. What sets this project apart is the '],
+              ['\u00A0\u00A0\u00A0\u00A0implementation of an AI opponent that elevates the gaming experience. Through '],
+              ['\u00A0\u00A0\u00A0\u00A0meticulous coding, I engineered an AI that makes educated choices when targeting '],
+              ['\u00A0\u00A0\u00A0\u00A0ships, enhancing the challenge for players. The seamless functionality of the AI creates '],
+              ['\u00A0\u00A0\u00A0\u00A0an immersive and engaging gaming environment. The Battleship Game showcases my '],
+              ['\u00A0\u00A0\u00A0\u00A0proficiency in front-end development and my ability to create not just visually '],
+              ['\u00A0\u00A0\u00A0\u00A0appealing but also intelligently designed applications. This project reflects my '],
+              ['\u00A0\u00A0\u00A0\u00A0commitment to pushing the boundaries of what can be achieved with web-based '],
+              ['\u00A0\u00A0\u00A0\u00A0games, showcasing both creativity and technical prowess.'],
             ])
             newWindow3()
             return true;
