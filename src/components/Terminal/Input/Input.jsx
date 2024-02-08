@@ -30,6 +30,14 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
     // route to new page by changing window.location
     window.open('https://johnarochadev.github.io/Battleship/', "_blank") //to open new page
  }
+  function githubWindow(){
+    // route to new page by changing window.location
+    window.open('https://github.com/JohnArochaDev', "_blank") //to open new page
+ }
+  function linkedinWindow(){
+    // route to new page by changing window.location
+    window.open('https://www.linkedin.com/in/johnarocha/', "_blank") //to open new page
+ }
 
   function checkCode(userInput) {
     let codex
@@ -209,14 +217,16 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             
             return true;
 
-            case 'github':
-              // Run code below
-              
-              return true;
-            case 'linkedin':
-              // Run code below
-              
-              return true;
+          case 'github':
+            // Run code below
+            githubWindow()
+            
+            return true;
+          case 'linkedin':
+            // Run code below
+            linkedinWindow()
+            
+            return true;
 
           case 'clear':
             // Run code below
