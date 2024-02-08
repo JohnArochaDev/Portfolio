@@ -1,0 +1,22 @@
+.iframe {
+  width: 108vh;
+  height: 57.4vh;
+  position: absolute;
+  margin-top: 12.7vh;
+
+  /* position: absolute; */
+  /* margin-left: 50vh;
+  margin-top: 10vh; */
+  /* background-color: #000;
+  color: #fff;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  font-family: 'Fira Code', monospace;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
+  display: block;
+  z-index: 1;
+  transition: all 0.3s ease; */
+}

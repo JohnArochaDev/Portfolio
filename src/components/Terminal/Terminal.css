@@ -6,7 +6,7 @@
 }
 
 .cristal {
-  pointer-events: none;
+  /* pointer-events: none; */ /* This is the line that didnt allow scroll wheel function */
   overflow: hidden;
   top: 0;
   right: 0;
@@ -20,6 +20,7 @@
 }
 
 .terminal {
+  overflow: auto;
   padding-top: 5vh;
   background-color: #030C08;
   height: 100vh;
