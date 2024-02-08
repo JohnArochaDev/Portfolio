@@ -33,7 +33,6 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
 
   function checkCode(userInput) {
     let codex
-    userInput.find((code) => {  //write a function that looks through userInput with .find
       userInput.find((code) => {  //write a function that looks through userInput with .find
         switch (code) {
           case 'help':
@@ -54,7 +53,9 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
           case 'all':
             // Run code below
             codex = true;
-            setText([...text, ['about me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- A little about me and a list of my skills'],
+            setText([...text, 
+              ['\u00A0\u00A0'],
+              ['about me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- A little about me and a list of my skills'],
             // ['\u00A0\u00A0'],
             ['help \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display help'],
             // ['\u00A0\u00A0'],
@@ -62,15 +63,19 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             // ['\u00A0\u00A0'],
             ['projects \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display projects'],
             // ['\u00A0\u00A0'],
-            ['project 1 \u00A0\u00A0\u00A0\u00A0-- open project 1'],
+            ['project 1 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 1'],
             // ['\u00A0\u00A0'],
-            ['project 2 \u00A0\u00A0\u00A0\u00A0-- open project 2'],
+            ['project 2 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 2'],
             // ['\u00A0\u00A0'],
-            ['project 3 \u00A0\u00A0\u00A0\u00A0-- open project 3'],
+            ['project 3 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3'],
             // ['\u00A0\u00A0'],
             ['npm i \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
             // ['\u00A0\u00A0'],
             ['hire me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me!'],
+            // ['\u00A0\u00A0'],
+            ['github \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me!'],
+            // ['\u00A0\u00A0'],
+            ['linkedin \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me!'],
             // ['\u00A0\u00A0'],
             ['clear \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- clear console'],
           ])
@@ -164,6 +169,8 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
           case 'about me':
             // Run code below
             setText([...text, 
+              ['\u00A0\u00A0'],
+              ['\u00A0\u00A0'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0_.-"""""-._'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0/\\\u00A0.--.....-.\\'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0/\u00A0/\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0|'],
@@ -202,6 +209,15 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             
             return true;
 
+            case 'github':
+              // Run code below
+              
+              return true;
+            case 'linkedin':
+              // Run code below
+              
+              return true;
+
           case 'clear':
             // Run code below
             setCompletedTexts(['If you feel lost type: help'])
@@ -222,7 +238,6 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
         }
       });
       return false
-    })
   }
 
   useEffect(() => {
