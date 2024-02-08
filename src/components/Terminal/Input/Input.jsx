@@ -86,6 +86,8 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             // Run code below
             setText([...text,
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
+              ['\u00A0\u00A0\u00A0The Weather App:'], 
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0I crafted a dynamic and user-friendly weather application that seamlessly '],
               ['\u00A0\u00A0\u00A0integrates real-time weather information from around the world. Developed using '],
               ['\u00A0\u00A0\u00A0Express.js, JSX, and JavaScript, the application is not only feature-rich but also mobile-friendly,'],
