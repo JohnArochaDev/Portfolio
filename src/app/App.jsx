@@ -5,12 +5,12 @@ import Terminal from '../components/Terminal/Terminal'
 import WindowsXP from '../components/Terminal/WindowsXP/WindowsXP';
 
 export default function App() {
-  const [url, setUrl] = useState('https://gifer.com/embed/fzNE');
-  const [iFrame, setIframe] = useState(null)
-  const [focus, setFocus] = useState(true)
+  const [url, setUrl] = useState('https://gifer.com/embed/fzNE');//this is the default url to hide the blank space
+  const [iFrame, setIframe] = useState(null)//this allows the iframe to be set from the terminal
+  const [focus, setFocus] = useState(true)// this is to focus the input in the terminal
 
   useEffect(() => {
-    document.getElementById('input').focus()
+    document.getElementById('input').focus()//creates focus on the input whenever the terminal is clicked
   }, [focus])
 
   return (

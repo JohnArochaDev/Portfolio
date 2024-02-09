@@ -1,8 +1,7 @@
 import './Terminal.css';
 import Input from './Input/Input'
-import WindowsXP from './WindowsXP/WindowsXP';
 import TypingEffect from './TypingEffect/TypingEffect';
-import { ReactTyped } from "react-typed";
+// import { ReactTyped } from "react-typed"; May come back to this
 import { useState, useEffect } from "react";
 
 export default function Terminal({setFocus, focus, iFrame, setIframe, setUrl, url}) {
@@ -30,10 +29,12 @@ export default function Terminal({setFocus, focus, iFrame, setIframe, setUrl, ur
     ['about me'],
     ['npm i'],
     ['hire me'],
+    ['github'],
+    ['linkedin'],
     ['clear'],
   ])
 
-  useEffect(() => { 
+  useEffect(() => { //keeps the bottom of the input in view
     if (text.length > 20){
       document.querySelector('.scrollIntoView').scrollIntoView(false)
     }

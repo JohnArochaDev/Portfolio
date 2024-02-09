@@ -5,59 +5,24 @@ import './Input.css'
 
 export default function Input({ iFrame, setIframe, url, setUrl, text, setText, userInput, setUserInput, canText, setCanText, codes, setCompletedTexts, completedTexts, textArrays, currentText, setCurrentText, arrayIndex, setArrayIndex, stringIndex, setStringIndex, charIndex, setCharIndex,}) {
 
-  function downloadURI(uri, name) 
-{
-    var link = document.createElement("a");
-    // If you don't know the name or want to use
-    // the webserver default set name = ''
-    link.setAttribute('download', name);
-    link.href = uri;
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-}
 
-  document.onmousedown = (e) => { // This prevents mouse clicking!!
+  document.onmousedown = (e) => { // This prevents mouse clicking, just like a terminal
     e.preventDefault();
-  } //Remove above code inf necessary in the future
+  }
   
   const inputRef = useRef(null);
   let value = ''
 
-  function handleChange(e) {
+  function handleChange(e) {// this allows the input to be seen
     value = inputRef.current.value;
     value.toLowerCase()
     setUserInput([e.target.value])
-    // Do something with the value
   }
 
-  function newWindow1(){
-    // route to new page by changing window.location
-    window.open('https://weatherapp-ga.fly.dev/', "_blank") //to open new page
- }
-  function newWindow2(){
-    // route to new page by changing window.location
-    window.open('https://drinks-app-t6mi.onrender.com/', "_blank") //to open new page
- }
-  function newWindow3(){
-    // route to new page by changing window.location
-    window.open('https://johnarochadev.github.io/Battleship/', "_blank") //to open new page
- }
-  function githubWindow(){
-    // route to new page by changing window.location
-    window.open('https://github.com/JohnArochaDev', "_blank") //to open new page
- }
-  function linkedinWindow(){
-    // route to new page by changing window.location
-    window.open('https://www.linkedin.com/in/johnarocha/', "_blank") //to open new page
- }
-
   function checkCode(userInput) {
-    let codex
-      userInput.find((code) => {  //write a function that looks through userInput with .find
+      userInput.find((code) => {//this finds the users input and checks it against the codes
         switch (code) {
           case 'help':
-            // Run code below
             setText([...text, 
               ['\u00A0\u00A0'],
               ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Welcome to my virtual command center! This mock terminal is your gateway to"],
@@ -69,45 +34,26 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               ["\u00A0\u00A0\u00A0"],
               ["\u00A0\u00A0\u00A0Type 'all' to see all available commands"],
             ])
-            return true;
+            return true
 
           case 'all':
-            // Run code below
-            codex = true;
             setText([...text, 
               ['\u00A0\u00A0'],
               ['about me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- A little about me and a list of my skills'],
-            // ['\u00A0\u00A0'],
-            ['help \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display help'],
-            // ['\u00A0\u00A0'],
-            ['all \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display all commands'],
-            // ['\u00A0\u00A0'],
-            ['project 1 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 1'],
-            // ['\u00A0\u00A0'],
-            [' cd project 1 \u00A0\u00A0-- try me out!'],
-            // ['\u00A0\u00A0'],
-            ['project 2 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 2'],
-            // ['\u00A0\u00A0'],
-            [' cd project 2 \u00A0\u00A0-- try me out!'],
-            // ['\u00A0\u00A0'],
-            ['project 3 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3'],
-            // ['\u00A0\u00A0'],
-            [' cd project 3 \u00A0\u00A0-- try me out!'],
-            // ['\u00A0\u00A0'],
-            ['npm i \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
-            // ['\u00A0\u00A0'],
-            ['hire me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me!'],
-            // ['\u00A0\u00A0'],
-            ['github \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my GitHub!'],
-            // ['\u00A0\u00A0'],
-            ['linkedin \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my LinkedIn!'],
-            // ['\u00A0\u00A0'],
-            ['clear \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- clear console'],
-          ])
-            return true;
+              ['help \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display help'],
+              ['all \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display all commands'],
+              ['project 1 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 1'],
+              ['project 2 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 2'],
+              ['project 3 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3'],
+              ['npm i \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
+              ['hire me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me!'],
+              ['github \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my GitHub!'],
+              ['linkedin \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my LinkedIn!'],
+              ['clear \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- clear console'],
+            ])
+            return true
 
           case 'project 1':
-            // Run code below
             setText([...text,
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 1: Weather App with Express.js, APIs, and MongoDB'], 
@@ -124,17 +70,9 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               ['\u00A0\u00A0\u00A0\u00A0development and my ability to seamlessly integrate various technologies to create a '],
               ['\u00A0\u00A0\u00A0\u00A0cohesive and feature-rich application.'],
             ])
-            setTimeout(() => {
-            newWindow1()}, 4000)
-            return true;
-
-          case 'cd project 1':
-            // Run code below
-            //Add functionality where when you open a project, and old fashioned windows xp div with an iframe displays your webpage
-            // setText([...text, ['Would you like to be redirected to "https://weatherapp-ga.fly.dev/"? [y/n]']])
             setUrl('https://weatherapp-ga.fly.dev/')
             setIframe(true)
-            return true;
+            return true
 
           case 'project 2':
             // Run code below
@@ -159,15 +97,9 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               ['\u00A0\u00A0\u00A0\u00A0authentication, demonstrating my commitment to creating engaging and practical '],
               ['\u00A0\u00A0\u00A0\u00A0web applications.'],
             ])
-            newWindow2()
-            return true;
-
-          case 'cd project 2':
-            // Run code below
-            //Add functionality where when you open a project, and old fashioned windows xp div with an iframe displays your webpage
             setUrl('https://drinks-app-t6mi.onrender.com/')
             setIframe(true)
-            return true;
+            return true
 
           case 'project 3':
             // Run code below
@@ -186,15 +118,9 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               ['\u00A0\u00A0\u00A0\u00A0commitment to pushing the boundaries of what can be achieved with web-based '],
               ['\u00A0\u00A0\u00A0\u00A0games, showcasing both creativity and technical prowess.'],
             ])
-            newWindow3()
-            return true;
-
-          case 'cd project 3':
-            // Run code below
-            //Add functionality where when you open a project, and old fashioned windows xp div with an iframe displays your webpage
             setUrl('https://johnarochadev.github.io/Battleship/')
             setIframe(true)
-            return true;
+            return true
 
           case 'about me':
             // Run code below
@@ -235,26 +161,23 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               fileSaver.saveAs("/assets/John-Arochas-Resume.pdf", "John's Resume.pdf");
             } 
             saveFile()
+            return true
 
-            return true;
           case 'hire me':
             // Run code below
-            
-            return true;
+            return true
 
           case 'github':
-            // Run code below
-            githubWindow()
-            
-            return true;
+            setUrl('https://github.com/JohnArochaDev')
+            setIframe(true)
+            return true
+
           case 'linkedin':
-            // Run code below
-            linkedinWindow()
-            
-            return true;
+            setUrl('https://www.linkedin.com/in/johnarocha/')
+            setIframe(true)
+            return true
 
           case 'clear':
-            // Run code below
             setCompletedTexts(['If you feel lost type: help'])
             setText(['If you feel lost type: help'])
             setCurrentText('')
@@ -263,11 +186,9 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             setCharIndex(0)
             setUrl('https://gifer.com/embed/fzNE')
             setIframe(null)
-            return true;
+            return true
 
           default:
-            codex = false;
-            console.log(codex)
             return false;
 
         }
@@ -287,7 +208,6 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
         }, 500);
       }
     };
-    console.log(text)
     document.addEventListener("keydown", listener);
     return () => {
       document.removeEventListener("keydown", listener);
