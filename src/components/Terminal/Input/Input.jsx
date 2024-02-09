@@ -1,8 +1,21 @@
 import { useEffect } from 'react';
 import { useRef } from 'react';
+import  fileSaver from 'file-saver';
 import './Input.css'
 
 export default function Input({ iFrame, setIframe, url, setUrl, text, setText, userInput, setUserInput, canText, setCanText, codes, setCompletedTexts, completedTexts, textArrays, currentText, setCurrentText, arrayIndex, setArrayIndex, stringIndex, setStringIndex, charIndex, setCharIndex,}) {
+
+  function downloadURI(uri, name) 
+{
+    var link = document.createElement("a");
+    // If you don't know the name or want to use
+    // the webserver default set name = ''
+    link.setAttribute('download', name);
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+}
 
   document.onmousedown = (e) => { // This prevents mouse clicking!!
     e.preventDefault();
@@ -218,8 +231,11 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             return true
 
           case 'npm i':
-            // Run code below
-            
+            const saveFile = () => {
+              fileSaver.saveAs("/assets/John-Arochas-Resume.pdf", "John's Resume.pdf");
+            } 
+            saveFile()
+
             return true;
           case 'hire me':
             // Run code below
