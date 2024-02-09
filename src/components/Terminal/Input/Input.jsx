@@ -1,10 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRef } from 'react';
 import  fileSaver from 'file-saver';
 import './Input.css'
 
 export default function Input({ iFrame, setIframe, url, setUrl, text, setText, userInput, setUserInput, canText, setCanText, codes, setCompletedTexts, completedTexts, textArrays, currentText, setCurrentText, arrayIndex, setArrayIndex, stringIndex, setStringIndex, charIndex, setCharIndex,}) {
 
+  const [download, setDownload] = useState(null)
 
   document.onmousedown = (e) => { // This prevents mouse clicking, just like a terminal
     e.preventDefault();
@@ -18,6 +19,10 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
     value.toLowerCase()
     setUserInput([e.target.value])
   }
+
+  const saveFile = () => {//this function saves my resume to someones computer
+    fileSaver.saveAs("/assets/John-Arochas-Resume.pdf", "John's Resume.pdf");
+  } 
 
   function checkCode(userInput) {
       userInput.find((code) => {//this finds the users input and checks it against the codes
@@ -34,6 +39,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               ["\u00A0\u00A0\u00A0"],
               ["\u00A0\u00A0\u00A0Type 'all' to see all available commands"],
             ])
+            setDownload(null)
             return true
 
           case 'all':
@@ -51,6 +57,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               ['linkedin \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my LinkedIn!'],
               ['clear \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- clear console'],
             ])
+            setDownload(null)
             return true
 
           case 'project 1':
@@ -72,6 +79,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             ])
             setUrl('https://weatherapp-ga.fly.dev/')
             setIframe(true)
+            setDownload(null)
             return true
 
           case 'project 2':
@@ -99,6 +107,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             ])
             setUrl('https://drinks-app-t6mi.onrender.com/')
             setIframe(true)
+            setDownload(null)
             return true
 
           case 'project 3':
@@ -120,6 +129,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             ])
             setUrl('https://johnarochadev.github.io/Battleship/')
             setIframe(true)
+            setDownload(null)
             return true
 
           case 'about me':
@@ -154,27 +164,43 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Libraries and Frameworks: React (class based and hooks), Express.js, Django, jQuery, Bootstrap, Materialize, Node.js, Mongoose, Axios, Django Rest Framework'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Other - RESTful Routing, JSON API, MERN stack'],
             ])
+            setDownload(null)
             return true
 
           case 'npm i':
-            const saveFile = () => {
-              fileSaver.saveAs("/assets/John-Arochas-Resume.pdf", "John's Resume.pdf");
-            } 
-            saveFile()
+            setText([...text, ['would you like to download my resume? [y/n]']])
+            setDownload(true)
             return true
+
+          case 'y':
+            if (download){
+              setDownload('y')
+              setText([...text, ['Downloading...']])
+              saveFile()
+            }
+            setDownload(null)
+            return true
+
+          case 'n':
+            setDownload(null)
+            return true
+              
 
           case 'hire me':
             // Run code below
+            setDownload(null)
             return true
 
           case 'github':
             setUrl('https://github.com/JohnArochaDev')
             setIframe(true)
+            setDownload(null)
             return true
 
           case 'linkedin':
             setUrl('https://www.linkedin.com/in/johnarocha/')
             setIframe(true)
+            setDownload(null)
             return true
 
           case 'clear':
@@ -186,6 +212,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             setCharIndex(0)
             setUrl('https://gifer.com/embed/fzNE')
             setIframe(null)
+            setDownload(null)
             return true
 
           default:
