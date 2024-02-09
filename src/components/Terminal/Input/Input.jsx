@@ -83,7 +83,6 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             return true
 
           case 'project 2':
-            // Run code below
             setText([...text, 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 2: Drink Catalog App with Django, Python, and Materialize'],
@@ -111,7 +110,6 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             return true
 
           case 'project 3':
-            // Run code below
             setText([...text, 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 3: Battleship Game with JavaScript AI'],
@@ -133,7 +131,6 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             return true
 
           case 'about me':
-            // Run code below
             setText([...text, 
               ['\u00A0\u00A0'],
               ['\u00A0\u00A0'],
@@ -187,7 +184,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               
 
           case 'hire me':
-            // Run code below
+            
             setDownload(null)
             return true
 
