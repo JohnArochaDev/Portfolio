@@ -118,7 +118,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
           case 'cd project 1':
             // Run code below
             //Add functionality where when you open a project, and old fashioned windows xp div with an iframe displays your webpage
-            setText([...text, ['Would you like to be redirected to "https://weatherapp-ga.fly.dev/"? [y/n]']])
+            // setText([...text, ['Would you like to be redirected to "https://weatherapp-ga.fly.dev/"? [y/n]']])
             setUrl('https://weatherapp-ga.fly.dev/')
             setIframe(true)
             return true;
@@ -279,6 +279,6 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
   }, [value, text, setText, setUserInput, userInput]);
 
   return (
-    <p className="input">➜ <input ref={inputRef} onChange={handleChange} className="inputBack" type="text" autoFocus={true} value={userInput} /></p>
+    <p className="input">➜ <input id='input' ref={inputRef} onChange={handleChange} className="inputBack" type="text" autoFocus={true} value={userInput} /></p>
   )
 }

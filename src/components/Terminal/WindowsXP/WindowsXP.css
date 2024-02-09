@@ -1,5 +1,5 @@
 .windowsXP {
-  top: 55%;
+  top: 50%;
   left: 60%;
   position: fixed;
   display: flex;
@@ -10,5 +10,18 @@
 
 img.window {
   position: fixed;
-  width: 110vh; 
+  width: 130vh; 
+}
+
+#x {
+  height: 4vh;
+  width: 4vh;
+  z-index: 100;
+  position: absolute;
+  bottom: 41.8vh;
+  left:60.3vh;
+  animation: none;
+  cursor: pointer;
+  /* visibility: hidden; */
+  opacity: 0;
 }

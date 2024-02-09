@@ -5,7 +5,7 @@ import TypingEffect from './TypingEffect/TypingEffect';
 import { ReactTyped } from "react-typed";
 import { useState, useEffect } from "react";
 
-export default function Terminal({iFrame, setIframe, setUrl, url}) {
+export default function Terminal({setFocus, focus, iFrame, setIframe, setUrl, url}) {
 
   const [completedTexts, setCompletedTexts] = useState([]);
   const [currentText, setCurrentText] = useState('');
@@ -40,7 +40,10 @@ export default function Terminal({iFrame, setIframe, setUrl, url}) {
   });
 
   return (
-    <div className="terminal cristal">
+    <div 
+    className="terminal cristal"
+    onClick={() => setFocus(!focus)}
+    >
       <p className="text" >
         Hello! My name is John Arocha
       </p>
