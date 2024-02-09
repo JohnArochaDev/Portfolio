@@ -53,8 +53,9 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               ['project 3 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3'],
               ['npm i \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
               ['hire me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me!'],
-              ['github \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my GitHub!'],
               ['linkedin \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my LinkedIn!'],
+              ['github \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my GitHub!'],
+              ['email \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
               ['clear \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- clear console'],
             ])
             setDownload(null)
@@ -161,6 +162,13 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Libraries and Frameworks: React (class based and hooks), Express.js, Django, jQuery, Bootstrap, Materialize, Node.js, Mongoose, Axios, Django Rest Framework'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Other - RESTful Routing, JSON API, MERN stack'],
             ])
+            setDownload(null)
+            return true
+
+          case 'email':
+            // setUrl('https://mail.google.com/mail/?view=cm&fs=1&to=jparocha777@gmail.com') //google wants a proxyy to not be from a different origin
+            // setIframe(true)
+            window.open('https://mail.google.com/mail/?view=cm&fs=1&to=jparocha777@gmail.com', '_blank');
             setDownload(null)
             return true
 
