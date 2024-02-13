@@ -24,6 +24,16 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
     fileSaver.saveAs("/assets/John-Arochas-Resume.pdf", "John's Resume.pdf");
   } 
 
+  function gitHub(){
+    // route to new page by changing window.location
+    window.open('https://github.com/JohnArochaDev', "_blank") //to open new page
+ }
+
+  function linkedIn(){
+    // route to new page by changing window.location
+    window.open('https://www.linkedin.com/in/johnarocha/', "_blank") //to open new page
+ }
+
   function checkCode(userInput) {
       userInput.find((code) => {//this finds the users input and checks it against the codes
         switch (code) {
@@ -197,14 +207,12 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             return true
 
           case 'github':
-            setUrl('https://github.com/JohnArochaDev')
-            setIframe(true)
+            gitHub()
             setDownload(null)
             return true
 
           case 'linkedin':
-            setUrl('https://www.linkedin.com/in/johnarocha/')
-            setIframe(true)
+            linkedIn()
             setDownload(null)
             return true
 
