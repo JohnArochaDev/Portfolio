@@ -39,6 +39,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
         switch (code) {
           case 'help':
             setText([...text, 
+              ['help'],
               ['\u00A0\u00A0'],
               ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Welcome to my virtual command center! This mock terminal is your gateway to"],
               ["\u00A0\u00A0\u00A0exploring my digital portfolio. Type 'about me' to learn more about me, or "],
@@ -54,6 +55,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
 
           case 'all':
             setText([...text, 
+              ['all'],
               ['\u00A0\u00A0'],
               ['about me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- A little about me and a list of my skills'],
               ['help \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display help'],
@@ -73,6 +75,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
 
           case 'project 1':
             setText([...text,
+              ['project 1'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 1: Weather App with Express.js, APIs, and MongoDB'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
@@ -95,6 +98,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
 
           case 'project 2':
             setText([...text, 
+              ['project 2'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 2: Drink Catalog App with Django, Python, and Materialize'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
@@ -122,6 +126,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
 
           case 'project 3':
             setText([...text, 
+              ['project 3'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 3: Battleship Game with JavaScript AI'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
@@ -143,6 +148,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
 
           case 'about me':
             setText([...text, 
+              ['about me'],
               ['\u00A0\u00A0'],
               ['\u00A0\u00A0'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0_.-"""""-._'],
@@ -176,6 +182,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             return true
 
           case 'email':
+            setText([...text, ['email']])
             // setUrl('https://mail.google.com/mail/?view=cm&fs=1&to=jparocha777@gmail.com') //google wants a proxyy to not be from a different origin
             // setIframe(true)
             window.open('https://mail.google.com/mail/?view=cm&fs=1&to=jparocha777@gmail.com', '_blank');
@@ -183,7 +190,7 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             return true
 
           case 'npm i':
-            setText([...text, ['would you like to download my resume? [y/n]']])
+            setText([...text,['npm i'], ['would you like to download my resume? [y/n]']])
             setDownload(true)
             return true
 
@@ -198,20 +205,23 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
 
           case 'n':
             setDownload(null)
+            setText([...text, ['Download canceled...']])
             return true
               
 
           case 'hire me':
-            
+            setText([...text, ['hire me']])
             setDownload(null)
             return true
 
           case 'github':
+            setText([...text, ['github']])
             gitHub()
             setDownload(null)
             return true
 
           case 'linkedin':
+            setText([...text, ['linkedin']])
             linkedIn()
             setDownload(null)
             return true
