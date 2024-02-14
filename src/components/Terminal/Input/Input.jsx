@@ -74,7 +74,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 1: Handshake App with MERN Stack'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0In creating Handshake, I built a sleek job-finding app using the robust MERN stack. It '],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my first project I made Handshake, It is a sleek job-finding app that uses the robust MERN stack. It '],
               ['\u00A0\u00A0\u00A0\u00A0connects with a 3rd party API, aggregating job listings from all over the internet, including sources like Indeed and'],
               ['\u00A0\u00A0\u00A0\u00A0LinkedIn. Users can easily filter job opportunities by type. The React-based interface ensures a smooth, visually '],
               ['\u00A0\u00A0\u00A0\u00A0appealing experience. Behind the scenes, Handshake integrates with MongoDB and uses a '],
@@ -101,9 +101,9 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setText([...text,
               ['project 2'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0Project 1: Weather App with Express.js, APIs, and MongoDB'], 
+              ['\u00A0\u00A0\u00A0\u00A0Project 2: Weather App with Express.js, APIs, and MongoDB'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0In my first project, I crafted a dynamic and user-friendly Weather App utilizing '],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0In my second project, I crafted a dynamic and user-friendly Weather App utilizing '],
               ['\u00A0\u00A0\u00A0\u00A0Express.js, APIs, Axios, HTML, CSS, and MongoDB. This application not only provides '],
               ['\u00A0\u00A0\u00A0\u00A0real-time weather information for any location worldwide but also incorporates an '],
               ['\u00A0\u00A0\u00A0\u00A0interactive map feature using the Google Maps API. Users can simply click on any '],
@@ -115,7 +115,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0development and my ability to seamlessly integrate various technologies to create a '],
               ['\u00A0\u00A0\u00A0\u00A0cohesive and feature-rich application.'],
               ['\u00A0\u00A0\u00A0\u00A0'],
-              ['\u00A0\u00A0\u00A0\u00A0[try code "cd project 1"]'],
+              ['\u00A0\u00A0\u00A0\u00A0[try code "cd project 2"]'],
             ])
             setUrl('https://weatherapp-ga.fly.dev/')
             setIframe(true)
@@ -153,7 +153,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0authentication, demonstrating my commitment to creating engaging and practical '],
               ['\u00A0\u00A0\u00A0\u00A0web applications.'],
               ['\u00A0\u00A0\u00A0\u00A0'],
-              ['\u00A0\u00A0\u00A0\u00A0[try code "cd project 2"]'],
+              ['\u00A0\u00A0\u00A0\u00A0[try code "cd project 3"]'],
             ])
             setUrl('https://drinks-app-t6mi.onrender.com/')
             setIframe(true)
@@ -185,7 +185,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0commitment to pushing the boundaries of what can be achieved with web-based '],
               ['\u00A0\u00A0\u00A0\u00A0games, showcasing both creativity and technical prowess.'],
               ['\u00A0\u00A0\u00A0\u00A0'],
-              ['\u00A0\u00A0\u00A0\u00A0[try code "cd project 3"]'],
+              ['\u00A0\u00A0\u00A0\u00A0[try code "cd project 4"]'],
             ])
             setUrl('https://johnarochadev.github.io/Battleship/')
             setIframe(true)
