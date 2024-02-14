@@ -57,10 +57,11 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['project 1 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 1'],
               ['project 2 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 2'],
               ['project 3 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3'],
-              ['linkedin \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my LinkedIn!'],
-              ['github \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my GitHub!'],
-              ['email \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
-              ['contact \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me!'],
+              ['project 4 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 4'],
+              ['linkedin \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my LinkedIn'],
+              ['github \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my GitHub'],
+              ['email \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- email me'],
+              ['contact \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me'],
               ['npm i \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
               ['clear \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- clear console'],
             ])
@@ -70,6 +71,35 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
           case 'project 1':
             setText([...text,
               ['project 1'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
+              ['\u00A0\u00A0\u00A0\u00A0Project 1: Handshake App with MERN Stack'], 
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0In creating Handshake, I built a sleek job-finding app using the robust MERN stack. It '],
+              ['\u00A0\u00A0\u00A0\u00A0connects with a 3rd party API, aggregating job listings from all over the internet, including sources like Indeed and'],
+              ['\u00A0\u00A0\u00A0\u00A0LinkedIn. Users can easily filter job opportunities by type. The React-based interface ensures a smooth, visually '],
+              ['\u00A0\u00A0\u00A0\u00A0appealing experience. Behind the scenes, Handshake integrates with MongoDB and uses a '],
+              ['\u00A0\u00A0\u00A0\u00A0custom backend API, showcasing my proficiency in the MERN stack and third-party API '],
+              ['\u00A0\u00A0\u00A0\u00A0integration. This project prioritizes functionality while underscoring my meticulous attention to '],
+              ['\u00A0\u00A0\u00A0\u00A0detail, resulting in a polished and refined application.'],
+              ['\u00A0\u00A0\u00A0\u00A0'],
+              ['\u00A0\u00A0\u00A0\u00A0[try code "cd project 1"]'],
+            ])
+            setUrl('https://handshakee.netlify.app')
+            setIframe(true)
+            setDownload(null)
+            return true
+
+          case 'cd project 1':
+            setText([...text,
+              ['cd project 1'],
+            ])
+            newTab('https://handshakee.netlify.app')
+            setDownload(null)
+            return true
+
+          case 'project 2':
+            setText([...text,
+              ['project 2'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 1: Weather App with Express.js, APIs, and MongoDB'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
@@ -92,17 +122,17 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setDownload(null)
             return true
 
-          case 'cd project 1':
+          case 'cd project 2':
             setText([...text,
-              ['cd project 1'],
+              ['cd project 2'],
             ])
             newTab('https://weatherapp-ga.fly.dev/')
             setDownload(null)
             return true
 
-          case 'project 2':
+          case 'project 3':
             setText([...text, 
-              ['project 2'],
+              ['project 3'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 2: Drink Catalog App with Django, Python, and Materialize'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
@@ -130,17 +160,17 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setDownload(null)
             return true
 
-          case 'cd project 2':
+          case 'cd project 3':
             setText([...text,
-              ['cd project 2'],
+              ['cd project 3'],
             ])
             newTab('https://drinks-app-t6mi.onrender.com/')
             setDownload(null)
             return true
 
-          case 'project 3':
+          case 'project 4':
             setText([...text, 
-              ['project 3'],
+              ['project 4'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 3: Battleship Game with JavaScript AI'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
@@ -162,9 +192,9 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setDownload(null)
             return true
 
-          case 'cd project 3':
+          case 'cd project 4':
             setText([...text,
-              ['cd project 3'],
+              ['cd project 4'],
             ])
             newTab('https://johnarochadev.github.io/Battleship/')
             setDownload(null)
