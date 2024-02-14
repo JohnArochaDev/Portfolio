@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import  fileSaver from 'file-saver';
 import './Input.css'
 
-export default function Input({ iFrame, setIframe, url, setUrl, text, setText, userInput, setUserInput, canText, setCanText, codes, setCompletedTexts, completedTexts, textArrays, currentText, setCurrentText, arrayIndex, setArrayIndex, stringIndex, setStringIndex, charIndex, setCharIndex,}) {
+export default function Input({ setIframe, setUrl, text, setText, userInput, setUserInput, setCompletedTexts, setCurrentText, setArrayIndex,setStringIndex, setCharIndex,}) {
 
   const [download, setDownload] = useState(null)
 
@@ -24,15 +24,9 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
     fileSaver.saveAs("/assets/John-Arochas-Resume.pdf", "John's Resume.pdf");
   } 
 
-  function gitHub(){
-    // route to new page by changing window.location
-    window.open('https://github.com/JohnArochaDev', "_blank") //to open new page
- }
-
-  function linkedIn(){
-    // route to new page by changing window.location
-    window.open('https://www.linkedin.com/in/johnarocha/', "_blank") //to open new page
- }
+  function newTab(url) {
+    window.open(url, "_blank") //to open new page
+  }
 
   function checkCode(userInput) {
       userInput.find((code) => {//this finds the users input and checks it against the codes
@@ -90,9 +84,19 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               ['\u00A0\u00A0\u00A0\u00A0preferred locations seamlessly. This project showcases my proficiency in full-stack '],
               ['\u00A0\u00A0\u00A0\u00A0development and my ability to seamlessly integrate various technologies to create a '],
               ['\u00A0\u00A0\u00A0\u00A0cohesive and feature-rich application.'],
+              ['\u00A0\u00A0\u00A0\u00A0'],
+              ['\u00A0\u00A0\u00A0\u00A0[try code "cd project 1"]'],
             ])
             setUrl('https://weatherapp-ga.fly.dev/')
             setIframe(true)
+            setDownload(null)
+            return true
+
+          case 'cd project 1':
+            setText([...text,
+              ['cd project 1'],
+            ])
+            newTab('https://weatherapp-ga.fly.dev/')
             setDownload(null)
             return true
 
@@ -118,9 +122,19 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               ['\u00A0\u00A0\u00A0\u00A0highlights my expertise in backend development, database management, and user'],
               ['\u00A0\u00A0\u00A0\u00A0authentication, demonstrating my commitment to creating engaging and practical '],
               ['\u00A0\u00A0\u00A0\u00A0web applications.'],
+              ['\u00A0\u00A0\u00A0\u00A0'],
+              ['\u00A0\u00A0\u00A0\u00A0[try code "cd project 2"]'],
             ])
             setUrl('https://drinks-app-t6mi.onrender.com/')
             setIframe(true)
+            setDownload(null)
+            return true
+
+          case 'cd project 2':
+            setText([...text,
+              ['cd project 2'],
+            ])
+            newTab('https://drinks-app-t6mi.onrender.com/')
             setDownload(null)
             return true
 
@@ -140,9 +154,19 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               ['\u00A0\u00A0\u00A0\u00A0appealing but also intelligently designed applications. This project reflects my '],
               ['\u00A0\u00A0\u00A0\u00A0commitment to pushing the boundaries of what can be achieved with web-based '],
               ['\u00A0\u00A0\u00A0\u00A0games, showcasing both creativity and technical prowess.'],
+              ['\u00A0\u00A0\u00A0\u00A0'],
+              ['\u00A0\u00A0\u00A0\u00A0[try code "cd project 3"]'],
             ])
             setUrl('https://johnarochadev.github.io/Battleship/')
             setIframe(true)
+            setDownload(null)
+            return true
+
+          case 'cd project 3':
+            setText([...text,
+              ['cd project 3'],
+            ])
+            newTab('https://johnarochadev.github.io/Battleship/')
             setDownload(null)
             return true
 
@@ -225,13 +249,13 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
 
           case 'github':
             setText([...text, ['github']])
-            gitHub()
+            newTab('https://github.com/JohnArochaDev')
             setDownload(null)
             return true
 
           case 'linkedin':
             setText([...text, ['linkedin']])
-            linkedIn()
+            newTab('https://www.linkedin.com/in/johnarocha/')
             setDownload(null)
             return true
 
