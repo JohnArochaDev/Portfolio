@@ -63,11 +63,11 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
               ['project 1 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 1'],
               ['project 2 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 2'],
               ['project 3 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3'],
-              ['npm i \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
-              ['hire me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me!'],
               ['linkedin \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my LinkedIn!'],
               ['github \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my GitHub!'],
               ['email \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
+              ['contact \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me!'],
+              ['npm i \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
               ['clear \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- clear console'],
             ])
             setDownload(null)
@@ -183,8 +183,6 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
 
           case 'email':
             setText([...text, ['email']])
-            // setUrl('https://mail.google.com/mail/?view=cm&fs=1&to=jparocha777@gmail.com') //google wants a proxyy to not be from a different origin
-            // setIframe(true)
             window.open('https://mail.google.com/mail/?view=cm&fs=1&to=jparocha777@gmail.com', '_blank');
             setDownload(null)
             return true
@@ -209,8 +207,20 @@ export default function Input({ iFrame, setIframe, url, setUrl, text, setText, u
             return true
               
 
-          case 'hire me':
-            setText([...text, ['hire me']])
+          case 'contact':
+            setText([...text, 
+              ['contact'],
+              ['\u00A0\u00A0'],
+              ['\u00A0\u00A0Feel free to reach out via email or phone. I look forward '],
+              ['\u00A0\u00A0to connecting with you!'],
+              ['\u00A0\u00A0'],
+              ['\u00A0\u00A0[Try code "email"]'],
+              ['\u00A0\u00A0'],
+              ['\u00A0\u00A0Phone:'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0(713) 550-4133'],
+              ['\u00A0\u00A0Email:'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0jparocha777@gmail.com'],
+            ])
             setDownload(null)
             return true
 
