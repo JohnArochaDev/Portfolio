@@ -1,8 +1,8 @@
 @font-face {
   font-family: "terminal";
-  src: url('/home/johndev/code/projects/Portfolio/src/app/font/terminal.ttf');
-  src: url('/home/johndev/code/projects/Portfolio/src/app/font/terminal.ttf'),
-  url('/home/johndev/code/projects/Portfolio/src/app/font/terminal.woff') format('woff'),
+  src: url('/src/app/font/terminal.ttf');
+  src: url('/src/app/font/terminal.ttf'),
+  url('/src/app/font/terminal.woff') format('woff'),
 }
 
 * {
