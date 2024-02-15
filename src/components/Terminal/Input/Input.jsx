@@ -82,7 +82,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0integration. This project prioritizes functionality while underscoring my meticulous attention to '],
               ['\u00A0\u00A0\u00A0\u00A0detail, resulting in a polished and refined application.'],
               ['\u00A0\u00A0\u00A0\u00A0'],
-              ['\u00A0\u00A0\u00A0\u00A0[try code "cd project 1"]'],
+              ['\u00A0\u00A0\u00A0\u00A0[You can explore the websitein the pop up window or type "cd project 1" to open it in a new tab]'],
             ])
             setUrl('https://handshakee.netlify.app')
             setIframe(true)
@@ -115,7 +115,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0development and my ability to seamlessly integrate various technologies to create a '],
               ['\u00A0\u00A0\u00A0\u00A0cohesive and feature-rich application.'],
               ['\u00A0\u00A0\u00A0\u00A0'],
-              ['\u00A0\u00A0\u00A0\u00A0[try code "cd project 2"]'],
+              ['\u00A0\u00A0\u00A0\u00A0[You can explore the websitein the pop up window or type "cd project 2" to open it in a new tab]'],
             ])
             setUrl('https://weatherapp-ga.fly.dev/')
             setIframe(true)
@@ -182,7 +182,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0commitment to pushing the boundaries of what can be achieved with web-based '],
               ['\u00A0\u00A0\u00A0\u00A0games, showcasing both creativity and technical prowess.'],
               ['\u00A0\u00A0\u00A0\u00A0'],
-              ['\u00A0\u00A0\u00A0\u00A0[try code "cd project 4"]'],
+              ['\u00A0\u00A0\u00A0\u00A0[You can explore the websitein the pop up window or type "cd project 4" to open it in a new tab]'],
             ])
             setUrl('https://johnarochadev.github.io/Battleship/')
             setIframe(true)
