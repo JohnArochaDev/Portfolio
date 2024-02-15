@@ -134,7 +134,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setText([...text, 
               ['project 3'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0Project 2: Drink Catalog App with Django, Python, and Materialize'],
+              ['\u00A0\u00A0\u00A0\u00A0Project 3: Drink Catalog App with Django, Python, and Materialize'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my second project, I ventured into the realm of web development with Django, '],
               ['\u00A0\u00A0\u00A0\u00A0Python, and Materialize to create a feature-packed Drink Catalog App. Leveraging the '],
@@ -152,11 +152,8 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0highlights my expertise in backend development, database management, and user'],
               ['\u00A0\u00A0\u00A0\u00A0authentication, demonstrating my commitment to creating engaging and practical '],
               ['\u00A0\u00A0\u00A0\u00A0web applications.'],
-              ['\u00A0\u00A0\u00A0\u00A0'],
-              ['\u00A0\u00A0\u00A0\u00A0[try code "cd project 3"]'],
             ])
-            setUrl('https://drinks-app-t6mi.onrender.com/')
-            setIframe(true)
+            newTab('https://drinks-app-bitter-voice-6309.fly.dev/')
             setDownload(null)
             return true
 
@@ -164,7 +161,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setText([...text,
               ['cd project 3'],
             ])
-            newTab('https://drinks-app-t6mi.onrender.com/')
+            newTab('https://drinks-app-bitter-voice-6309.fly.dev/')
             setDownload(null)
             return true
 
@@ -172,7 +169,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setText([...text, 
               ['project 4'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0Project 3: Battleship Game with JavaScript AI'],
+              ['\u00A0\u00A0\u00A0\u00A0Project 4: Battleship Game with JavaScript AI'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0In my third project, I delved into the realm of game development, creating a captivating '],
               ['\u00A0\u00A0\u00A0\u00A0Battleship Game using JavaScript, CSS, and HTML. What sets this project apart is the '],
