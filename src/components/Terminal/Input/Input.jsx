@@ -82,7 +82,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0integration. This project prioritizes functionality while underscoring my meticulous attention to '],
               ['\u00A0\u00A0\u00A0\u00A0detail, resulting in a polished and refined application.'],
               ['\u00A0\u00A0\u00A0\u00A0'],
-              ['\u00A0\u00A0\u00A0\u00A0[You can explore the websitein the pop up window or type "cd project 1" to open it in a new tab]'],
+              ['\u00A0\u00A0\u00A0\u00A0[You can explore the website in the pop up window or type "cd project 1" to open it in a new tab]'],
             ])
             setUrl('https://handshakee.netlify.app')
             setIframe(true)
@@ -115,7 +115,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0development and my ability to seamlessly integrate various technologies to create a '],
               ['\u00A0\u00A0\u00A0\u00A0cohesive and feature-rich application.'],
               ['\u00A0\u00A0\u00A0\u00A0'],
-              ['\u00A0\u00A0\u00A0\u00A0[You can explore the websitein the pop up window or type "cd project 2" to open it in a new tab]'],
+              ['\u00A0\u00A0\u00A0\u00A0[You can explore the website in the pop up window or type "cd project 2" to open it in a new tab]'],
             ])
             setUrl('https://weatherapp-ga.fly.dev/')
             setIframe(true)
@@ -136,7 +136,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 3: Drink Catalog App with Django, Python, and Materialize'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my second project, I ventured into the realm of web development with Django, '],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my third project, I ventured into the realm of web development with Django, '],
               ['\u00A0\u00A0\u00A0\u00A0Python, and Materialize to create a feature-packed Drink Catalog App. Leveraging the '],
               ["\u00A0\u00A0\u00A0\u00A0power of Django's backend capabilities, I seamlessly integrated an API to curate a "],
               ['\u00A0\u00A0\u00A0\u00A0catalog featuring 636 alcoholic and non-alcoholic drinks. The application interacts '],
@@ -171,7 +171,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 4: Battleship Game with JavaScript AI'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0In my third project, I delved into the realm of game development, creating a captivating '],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0In my fourth project, I delved into the realm of game development, creating a captivating '],
               ['\u00A0\u00A0\u00A0\u00A0Battleship Game using JavaScript, CSS, and HTML. What sets this project apart is the '],
               ['\u00A0\u00A0\u00A0\u00A0implementation of an AI opponent that elevates the gaming experience. Through '],
               ['\u00A0\u00A0\u00A0\u00A0meticulous coding, I engineered an AI that makes educated choices when targeting '],
@@ -182,7 +182,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0commitment to pushing the boundaries of what can be achieved with web-based '],
               ['\u00A0\u00A0\u00A0\u00A0games, showcasing both creativity and technical prowess.'],
               ['\u00A0\u00A0\u00A0\u00A0'],
-              ['\u00A0\u00A0\u00A0\u00A0[You can explore the websitein the pop up window or type "cd project 4" to open it in a new tab]'],
+              ['\u00A0\u00A0\u00A0\u00A0[You can explore the website in the pop up window or type "cd project 4" to open it in a new tab]'],
             ])
             setUrl('https://johnarochadev.github.io/Battleship/')
             setIframe(true)
