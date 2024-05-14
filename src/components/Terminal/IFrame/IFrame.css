@@ -1,22 +1,9 @@
-/* .iframe {
-  position: relative;
-  margin-top: 10%;
-  width: 99%;
-  height:70%;
-  margin-top: 11.1%;
+.iframe {
+  width: 98.7%; /* Relative width to the parent div */
+  height: calc(100% - 36%); /* Set height to fill remaining space within parent div */
   border: none;
   box-sizing: border-box;
-  overflow: hidden;
-} */
-
-.iframe 
-{
-  width: 99%;
-  height: 74.5%;
-  border: none;
-  box-sizing: border-box;
-  position: absolute; /* Position the iframe absolutely */
-  top: 20.8%; /* Align the top of the iframe with the top of its container */
-  left: 1; /* Align the left of the iframe with the left of its container */
+  position: absolute;
+  top: 25%; /* Adjust according to your layout */
   overflow: hidden;
 }

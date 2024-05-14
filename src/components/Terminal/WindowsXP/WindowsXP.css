@@ -2,8 +2,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 47%;
-  height: 67.8%;
+  width: 77%;
+  height: 77.8%;
   max-width: 90vw; /* Limit maximum width to 90% of viewport width */
   max-height: 90vh; /* Limit maximum height to 90% of viewport height */
   position: fixed;
