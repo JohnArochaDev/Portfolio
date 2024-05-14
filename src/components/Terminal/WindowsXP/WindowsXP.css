@@ -22,9 +22,8 @@
   width: 3vh;
   z-index: 100;
   position: absolute;
-  top: 0.4%;
+  top: 7%;
   right: 0.7%;
   cursor: pointer;
-  /* visibility: hidden; */
   opacity: 0;
 }
