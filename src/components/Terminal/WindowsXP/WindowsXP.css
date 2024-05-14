@@ -1,17 +1,20 @@
 .windowsXP {
   top: 50%;
-  right: 50%;
-  width: 10vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 47%;
+  height: 67.8%;
+  max-width: 90vw; /* Limit maximum width to 90% of viewport width */
+  max-height: 90vh; /* Limit maximum height to 90% of viewport height */
   position: fixed;
   display: flex;
-  text-align: center;
   justify-content: center;
   align-items: center;
 }
 
-img.window {
-  position: fixed;
-  width: 100vh; 
+.window {
+  position: absolute;
+  width: 100%; 
 }
 
 #x {
@@ -19,8 +22,8 @@ img.window {
   width: 3vh;
   z-index: 100;
   position: absolute;
-  bottom: 32vh;
-  left:52.9vh;
+  top: 0.4%;
+  right: 0.7%;
   cursor: pointer;
   /* visibility: hidden; */
   opacity: 0;

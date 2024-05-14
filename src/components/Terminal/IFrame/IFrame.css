@@ -1,6 +1,22 @@
-.iframe {
-  width: 98.5vh;
-  height:52.5vh;
-  position: absolute;
-  margin-top: 11.5vh;
+/* .iframe {
+  position: relative;
+  margin-top: 10%;
+  width: 99%;
+  height:70%;
+  margin-top: 11.1%;
+  border: none;
+  box-sizing: border-box;
+  overflow: hidden;
+} */
+
+.iframe 
+{
+  width: 99%;
+  height: 74.5%;
+  border: none;
+  box-sizing: border-box;
+  position: absolute; /* Position the iframe absolutely */
+  top: 20.8%; /* Align the top of the iframe with the top of its container */
+  left: 1; /* Align the left of the iframe with the left of its container */
+  overflow: hidden;
 }
