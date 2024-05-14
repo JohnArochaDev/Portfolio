@@ -74,11 +74,11 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 1: Handshake App with MERN Stack'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my first project I made Handshake, It is a sleek job-finding app that uses the robust MERN stack. It '],
-              ['\u00A0\u00A0\u00A0\u00A0connects with a 3rd party API, aggregating job listings from all over the internet, including sources like Indeed and'],
-              ['\u00A0\u00A0\u00A0\u00A0LinkedIn. Users can easily filter job opportunities by type. The React-based interface ensures a smooth, visually '],
-              ['\u00A0\u00A0\u00A0\u00A0appealing experience. Behind the scenes, Handshake integrates with MongoDB and uses a '],
-              ['\u00A0\u00A0\u00A0\u00A0custom backend API, showcasing my proficiency in the MERN stack and third-party API '],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my first project I made Handshake, It is a sleek job-finding app that uses the robust MERN stack.'],
+              ['\u00A0\u00A0\u00A0\u00A0It connects with a 3rd party API, aggregating job listings from all over the internet, including sources'],
+              ['\u00A0\u00A0\u00A0\u00A0like Indeed and LinkedIn. Users can easily filter job opportunities by type. The React-based interface '],
+              ['\u00A0\u00A0\u00A0\u00A0ensures a smooth, visually appealing experience. Behind the scenes, Handshake integrates with MongoDB '],
+              ['\u00A0\u00A0\u00A0\u00A0and uses a  custom backend API, showcasing my proficiency in the MERN stack and third-party API '],
               ['\u00A0\u00A0\u00A0\u00A0integration. This project prioritizes functionality while underscoring my meticulous attention to '],
               ['\u00A0\u00A0\u00A0\u00A0detail, resulting in a polished and refined application.'],
               ['\u00A0\u00A0\u00A0\u00A0'],
@@ -181,19 +181,10 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0appealing but also intelligently designed applications. This project reflects my '],
               ['\u00A0\u00A0\u00A0\u00A0commitment to pushing the boundaries of what can be achieved with web-based '],
               ['\u00A0\u00A0\u00A0\u00A0games, showcasing both creativity and technical prowess.'],
-              ['\u00A0\u00A0\u00A0\u00A0'],
-              ['\u00A0\u00A0\u00A0\u00A0[You can explore the website in the pop up window or type "cd project 4" to open it in a new tab]'],
-            ])
-            setUrl('https://johnarochadev.github.io/Battleship/')
-            setIframe(true)
-            setDownload(null)
-            return true
-
-          case 'cd project 4':
-            setText([...text,
-              ['cd project 4'],
             ])
             newTab('https://johnarochadev.github.io/Battleship/')
+            // setUrl('https://johnarochadev.github.io/Battleship/')
+            // setIframe(true)
             setDownload(null)
             return true
 
