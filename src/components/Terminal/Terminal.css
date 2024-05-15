@@ -1,5 +1,5 @@
 .text {
-  font-size: 70px;
+  font-size: 30px;
   text-align: left;
   padding-left: 2vh;
   margin-top: 1vh;
@@ -31,5 +31,5 @@ p.tcomands {
   text-align: left;
   padding-top: 2vh;
   padding-left: 10vh;
-  font-size: 30px;
+  font-size: 70px;
 }
