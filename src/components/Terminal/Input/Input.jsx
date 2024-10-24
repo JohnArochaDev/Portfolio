@@ -21,7 +21,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
   }
 
   const saveFile = () => {//this function saves my resume to someones computer
-    fileSaver.saveAs("/assets/John-Arochas-Resume.pdf", "John's Resume.pdf");
+    fileSaver.saveAs("public/assets/John-Arocha's-Resume.pdf", "John's Resume.pdf");
   } 
 
   function newTab(url) {
