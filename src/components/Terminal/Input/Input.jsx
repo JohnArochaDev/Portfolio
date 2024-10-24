@@ -20,8 +20,11 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
     setUserInput([e.target.value])
   }
 
+  // const saveFile = () => {
+  //   fileSaver.saveAs("/public/assets/John-Arocha's-Resume.pdf", "John's Resume.pdf");
+  // }
   const saveFile = () => {
-    fileSaver.saveAs("/public/assets/John-Arocha's-Resume.pdf", "John's Resume.pdf");
+    fileSaver.saveAs("http://johnarocha.com/public/assets/John-Arocha's-Resume.pdf", "John's Resume.pdf");
   }
 
   function newTab(url) {
