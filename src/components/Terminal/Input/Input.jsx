@@ -20,9 +20,9 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
     setUserInput([e.target.value])
   }
 
-  const saveFile = () => {//this function saves my resume to someones computer
-    fileSaver.saveAs("public/assets/John-Arocha's-Resume.pdf", "John's Resume.pdf");
-  } 
+  const saveFile = () => {
+    fileSaver.saveAs("/public/assets/John-Arocha's-Resume.pdf", "John's Resume.pdf");
+  }
 
   function newTab(url) {
     window.open(url, "_blank") //to open new page
