@@ -59,6 +59,8 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['project 2 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 2'],
               ['project 3 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3'],
               ['project 4 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 4'],
+              ['cd project 2 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 2 in a new tab'],
+              ['cd project 3 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3 in a new tab'],
               ['linkedin \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my LinkedIn'],
               ['github \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my GitHub'],
               ['email \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- email me'],
@@ -253,13 +255,20 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             return true
 
           case 'github':
-            setText([...text, ['github']])
+            setText([...text, 
+              ['github'],
+              ['\u00A0\u00A0']
+            ])
             newTab('https://github.com/JohnArochaDev')
             setDownload(null)
             return true
 
           case 'linkedin':
-            setText([...text, ['linkedin']])
+            setText([...text, 
+              ['linkedin'],
+              ['\u00A0\u00A0'],
+              ['I bet you wanna hire me after seeing that. Try code \'email\' to get in touch ;]']
+            ])
             newTab('https://www.linkedin.com/in/johnarocha/')
             setDownload(null)
             return true
