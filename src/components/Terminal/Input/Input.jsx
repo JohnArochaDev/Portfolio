@@ -252,9 +252,9 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0to connecting with you!'],
               ['\u00A0\u00A0'],
               ['\u00A0\u00A0Phone: (713) 550-4133'],
-              ['\u00A0\u00A0Email: jparocha777@gmail.com  [try code \'email\']'],
-              ['\u00A0\u00A0LinkedIn: https://www.linkedin.com/in/johnarocha/  [try code \'linkedin\']'],
-              ['\u00A0\u00A0GitHub: https://github.com/JohnArochaDev  [try code \'github\']'],
+              ['\u00A0\u00A0Email: jparocha777@gmail.com  [try cmd \'email\']'],
+              ['\u00A0\u00A0LinkedIn: https://www.linkedin.com/in/johnarocha/  [try cmd \'linkedin\']'],
+              ['\u00A0\u00A0GitHub: https://github.com/JohnArochaDev  [try cmd \'github\']'],
             ])
             setDownload(null)
             return true
@@ -272,7 +272,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setText([...text, 
               ['linkedin'],
               ['\u00A0\u00A0'],
-              ['I bet you wanna hire me after seeing that. Try code \'email\' to get in touch ;]']
+              ['I bet you wanna hire me after seeing that. Try cmd \'email\' to get in touch ;]']
             ])
             newTab('https://www.linkedin.com/in/johnarocha/')
             setDownload(null)
