@@ -1,10 +1,10 @@
 .classicYoutube-video {
   z-index: 100;
   position: absolute;
-  width: 65%; /* Your desired width */
+  width: 70%; /* Your desired width */
   height: 39%; /* Add your desired height */
   top: 31%; /* Adjust according to your layout */
-  left: 3%;
+  left: 7%;
   overflow: hidden;
   object-fit: fill; /* Stretches the video to fill the specified dimensions */
 }
