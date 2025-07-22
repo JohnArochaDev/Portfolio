@@ -198,7 +198,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0_./\\\u00A0\u00A0'.____.'"],
               ['\u00A0\u00A0\u00A0_.:::|\u00A0`\\\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0|\\:._'],
               ["\u00A0.::::::::`\\\u00A0'.\u00A0\u00A0\u00A0/\u00A0/::::."],
-              ['/jgs::::::::|/::\\/:\\|:::::\\'],
+              ['/jpa::::::::|/::\\/:\\|:::::\\'],
               ['\u00A0\u00A0'],
               ['\u00A0\u00A0\u00A0About Me:'],
               ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Hello, I'm John Arocha, a full-stack web developer, working at Fiserv/Clover, "],
