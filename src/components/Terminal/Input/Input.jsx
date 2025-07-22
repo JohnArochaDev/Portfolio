@@ -183,8 +183,6 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0games, showcasing both creativity and technical prowess.'],
             ])
             newTab('https://johnarochadev.github.io/Battleship/')
-            // setUrl('https://johnarochadev.github.io/Battleship/')
-            // setIframe(true)
             setDownload(null)
             return true
 
