@@ -111,7 +111,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0integration. This project prioritizes functionality while underscoring my meticulous attention to '],
               ['\u00A0\u00A0\u00A0\u00A0detail, resulting in a polished and refined application.'],
               ['\u00A0\u00A0\u00A0\u00A0'],
-              ['\u00A0\u00A0\u00A0\u00A0[You can explore the website in the pop up window or type "cd project 1" to open it in a new tab]'],
+              ['\u00A0\u00A0\u00A0\u00A0[You can explore the website in the pop up window or type \'cd project 1\' to open it in a new tab]'],
             ])
             setUrl('https://handshakee.netlify.app')
             setIframe(true)
@@ -250,12 +250,11 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0'],
               ['\u00A0\u00A0Feel free to reach out via LinkedIn, email or phone. I look forward '],
               ['\u00A0\u00A0to connecting with you!'],
-              ['\u00A0\u00A0[Try code "email"]'],
               ['\u00A0\u00A0'],
               ['\u00A0\u00A0Phone: (713) 550-4133'],
-              ['\u00A0\u00A0Email: jparocha777@gmail.com'],
-              ['\u00A0\u00A0LinkedIn: https://www.linkedin.com/in/johnarocha/  [Try code "linkedin"]'],
-              ['\u00A0\u00A0GitHub: https://github.com/JohnArochaDev  [Try code "github"]'],
+              ['\u00A0\u00A0Email: jparocha777@gmail.com  [try code \'email\']'],
+              ['\u00A0\u00A0LinkedIn: https://www.linkedin.com/in/johnarocha/  [try code \'linkedin\']'],
+              ['\u00A0\u00A0GitHub: https://github.com/JohnArochaDev  [try code \'github\']'],
             ])
             setDownload(null)
             return true
