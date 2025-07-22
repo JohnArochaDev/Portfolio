@@ -42,18 +42,18 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ["\u00A0\u00A0\u00A0interactive platform is designed to showcase my journey as a full-stack web developer "],
               ["\u00A0\u00A0\u00A0and former 3D artist. Dive in and enjoy the personalized experience!"],
               ["\u00A0\u00A0\u00A0"],
-              ["\u00A0\u00A0\u00A0Type 'all' to see all available commands"],
+              ["\u00A0\u00A0\u00A0Type 'ls' to see all available commands"],
             ])
             setDownload(null)
             return true
 
-          case 'all':
+          case 'ls':
             setText([...text, 
-              ['all'],
+              ['ls'],
               ['\u00A0\u00A0'],
               ['about me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- A little about me and my skills'],
               ['help \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display help'],
-              ['all \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display all commands'],
+              ['ls \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display all commands'],
               ['project 1 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 1'],
               ['project 2 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 2'],
               ['project 3 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3'],
