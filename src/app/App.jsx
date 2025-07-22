@@ -24,7 +24,8 @@ export default function App() {
       url={url}
       setUrl={setUrl}
       />
-      <WindowsXP 
+      <WindowsXP
+      video={true}
       setUrl={setUrl}
       url={url}
       iFrame={iFrame}
