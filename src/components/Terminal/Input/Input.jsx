@@ -21,11 +21,11 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
   }
 
   const saveFile = () => {
-    fileSaver.saveAs("/public/assets/John-Arocha's-Resume.pdf", "John's Resume.pdf");
+    fileSaver.saveAs("/assets/John-Arocha's-Resume.pdf", "John's Resume.pdf");
   }
 
   function newTab(url) {
-    window.open(url, "_blank") //to open new page
+    window.open(url, "_blank")
   }
 
   function checkCode(userInput) {

@@ -16,7 +16,6 @@ input.middle:focus {
 }
 
 .input {
-  /* position: absolute; */
   text-align: left;
   margin-left: 2vh;
   font-size: 10x;
