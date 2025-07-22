@@ -1,9 +1,9 @@
 .classicYoutube-video {
   z-index: 100;
   position: absolute;
-  width: 70%;
+  width: 55%;
   position: absolute;
   top: 31%; /* Adjust according to your layout */
-  left: 14%;
+  left: 10%;
   overflow: hidden;
 }
