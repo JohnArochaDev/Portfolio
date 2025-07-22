@@ -195,7 +195,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['/jgs::::::::|/::\\/:\\|:::::\\'],
               ['\u00A0\u00A0'],
               ['\u00A0\u00A0\u00A0About Me:'],
-              ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Hello, I'm John Arocha, a full-stack web developer and General Assembly graduate "],
+              ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Hello, I'm John Arocha, a full-stack web developer, working at Fiserv/Clover, "],
               ["\u00A0\u00A0\u00A0with a background as a 3D artist. My journey from the visual arts to software "],
               ["\u00A0\u00A0\u00A0engineering brings a creative edge and meticulous attention to detail to my work. As a "],
               ["\u00A0\u00A0\u00A0full-stack engineer, I apply a unique perspective to problem-solving and strive to "],
@@ -203,11 +203,11 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ["\u00A0\u00A0\u00A0your ideas into innovative web experiences."],
               ['\u00A0\u00A0\u00A0'],
               ['\u00A0\u00A0\u00A0Skills:'],
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Languages: JavaScript, HTML, CSS, Python, SQL, JSON, Typescript, EJS, DTL, JSX'],
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Database: PostgreSQL, MongoDB'],
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Libraries and Frameworks: React (class based and hooks), Express.js, Django, jQuery,'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Languages: TypeScript, Java, JavaScript, C#, Python, HTML, CSS, EJS, DTL, JSX'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Database: PostgreSQL, MongoDB, SQL, mySQL'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Libraries and Frameworks: React (class based and hooks), SpringBoot, Vite, Express, Django, jQuery,'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Bootstrap, Materialize, Node.js, Mongoose, Axios, Django Rest Framework'],
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Other - RESTful Routing, JSON API, MERN stack'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Other - Docker, RESTful Routing, JSON API, MERN, MEAN'],
             ])
             setDownload(null)
             return true
