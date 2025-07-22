@@ -70,8 +70,8 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['email \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- email me'],
               ['contact \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me'],
               ['npm i \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
-              ['cp phone \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- copy phone number'],
-              ['cp email \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- copy email'],
+              // ['cp phone \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- copy phone number'],
+              // ['cp email \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- copy email'],
               ['clear \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- clear console'],
             ])
             setDownload(null)
@@ -279,21 +279,21 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setDownload(null)
             return true
           
-          case 'cp phone':
-            addToClipbboard('(713) 550-4133')
-            setText([...text,
-              ['phone number copied']
-            ])
-            setDownload(null)
-            return true
+          // case 'cp phone':
+          //   addToClipbboard('(713) 550-4133')
+          //   setText([...text,
+          //     ['phone number copied']
+          //   ])
+          //   setDownload(null)
+          //   return true
 
-          case 'cp email':
-            addToClipbboard('jparocha777@gmail.com')
-            setText([...text,
-              ['email copied']
-            ])
-            setDownload(null)
-            return true
+          // case 'cp email':
+          //   addToClipbboard('jparocha777@gmail.com')
+          //   setText([...text,
+          //     ['email copied']
+          //   ])
+          //   setDownload(null)
+          //   return true
           
             case 'clear':
             setCompletedTexts(['If you feel lost type: help'])
