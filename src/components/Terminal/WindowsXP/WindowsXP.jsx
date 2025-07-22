@@ -4,7 +4,7 @@ import ClassicYoutube from '../ClassicYoutube/ClassicYoutube';
 import classicYoutube from '../../../photos/classicYoutubeTransparent.png'
 import IFrame from "../IFrame/IFrame";
 
-export default function WindowsXP({ iFrame, setIframe, setUrl, url, video}) {
+export default function WindowsXP({ iFrame, setIframe, setUrl, url, videoType, video}) {
 
   function close() {
     setUrl('');
@@ -12,11 +12,11 @@ export default function WindowsXP({ iFrame, setIframe, setUrl, url, video}) {
   }
 
   return (
-    video ? (
+    videoType, video ? (
       <div className='windowsXP' style={iFrame? {} : {display:'none'}}> 
         <img className='window' src={xpWindow} alt="" />
         <button id='x' onClick={() => close()}>BUTTON BABY</button>
-        <ClassicYoutube photo={classicYoutube} />
+        <ClassicYoutube photo={classicYoutube} video={video} />
     </div>
     ) : (
     <div className='windowsXP' style={iFrame? {} : {display:'none'}}> 
