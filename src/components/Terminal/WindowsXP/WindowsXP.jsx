@@ -4,11 +4,13 @@ import ClassicYoutube from '../ClassicYoutube/ClassicYoutube';
 import classicYoutube from '../../../photos/classicYoutubeTransparent.png'
 import IFrame from "../IFrame/IFrame";
 
-export default function WindowsXP({ iFrame, setIframe, setUrl, url, videoType, video}) {
+export default function WindowsXP({ iFrame, setIframe, setUrl, url, videoType, video, setVideo, setVideoType}) {
 
   function close() {
     setUrl('');
     setIframe(null);
+    setVideoType(false)
+    setVideo('')
   }
 
   return (

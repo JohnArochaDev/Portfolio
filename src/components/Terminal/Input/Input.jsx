@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useRef } from 'react';
 import  fileSaver from 'file-saver';
+import safePass from '../../../videos/safePass.mp4'
 import './Input.css'
 
-export default function Input({ setIframe, setUrl, text, setText, userInput, setUserInput, setCompletedTexts, setCurrentText, setArrayIndex,setStringIndex, setCharIndex,}) {
+export default function Input({ setIframe, setUrl, text, setText, userInput, setUserInput, setCompletedTexts, setCurrentText, setArrayIndex,setStringIndex, setCharIndex, setVideoType, setVideo}) {
 
   const [download, setDownload] = useState(null)
 
@@ -72,9 +73,29 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setText([...text,
               ['project 1'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0Project 1: Handshake App with MERN Stack'], 
+              ['\u00A0\u00A0\u00A0\u00A0Project 1: SafePass Chrome extension, TS, React, Springboot'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my first project I made Handshake, It is a sleek job-finding app that uses the robust MERN stack.'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my first project I Chrome extension called SafePass. It uses Typescript, React, Vite and '],
+              ['\u00A0\u00A0\u00A0\u00A0Springboot. This application has many features, including an industry-standard encrypted database, password breech '],
+              ['\u00A0\u00A0\u00A0\u00A0verification, auto saving and auto filling features, password generation, and many more features! The API includes '],
+              ['\u00A0\u00A0\u00A0\u00A0 Swagger/OpenAPI documentation, account password hashing, JWT, and username and password encryption for saved passwords,  '],
+              ['\u00A0\u00A0\u00A0\u00A0This chrome extension was a blast to build. I used to use it on my own devices (untill I got tired of paying for the backend and the DB).  '],
+              ['\u00A0\u00A0\u00A0\u00A0I used mySql for the database, and I used vite on the front end to compile the project. '],
+              ['\u00A0\u00A0\u00A0\u00A0Enjoy the quick video preview to showcase the functionality!'],
+            ])
+            setIframe(true)
+            setVideoType(true)
+            setVideo(safePass)
+            setDownload(null)
+            return true
+
+          case 'project 2':
+            setText([...text,
+              ['project 2'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
+              ['\u00A0\u00A0\u00A0\u00A0Project 2: Handshake App with MERN Stack'], 
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my second project I made Handshake, It is a sleek job-finding app that uses the robust MERN stack.'],
               ['\u00A0\u00A0\u00A0\u00A0It connects with a 3rd party API, aggregating job listings from all over the internet, including sources'],
               ['\u00A0\u00A0\u00A0\u00A0like Indeed and LinkedIn. Users can easily filter job opportunities by type. The React-based interface '],
               ['\u00A0\u00A0\u00A0\u00A0ensures a smooth, visually appealing experience. Behind the scenes, Handshake integrates with MongoDB '],
@@ -89,44 +110,11 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setDownload(null)
             return true
 
-          case 'cd project 1':
-            setText([...text,
-              ['cd project 1'],
-            ])
-            newTab('https://handshakee.netlify.app')
-            setDownload(null)
-            return true
-
-          case 'project 2':
-            setText([...text,
-              ['project 2'],
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0Project 2: Weather App with Express.js, APIs, and MongoDB'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0In my second project, I crafted a dynamic and user-friendly Weather App utilizing '],
-              ['\u00A0\u00A0\u00A0\u00A0Express.js, APIs, Axios, HTML, CSS, and MongoDB. This application not only provides '],
-              ['\u00A0\u00A0\u00A0\u00A0real-time weather information for any location worldwide but also incorporates an '],
-              ['\u00A0\u00A0\u00A0\u00A0interactive map feature using the Google Maps API. Users can simply click on any '],
-              ['\u00A0\u00A0\u00A0\u00A0point on the map, and the app will display the weather details for the selected location. '],
-              ['\u00A0\u00A0\u00A0\u00A0To enhance the user experience, I implemented authentication features, ensuring '],
-              ['\u00A0\u00A0\u00A0\u00A0secure access to personalized content. Additionally, the integration with MongoDB '],
-              ['\u00A0\u00A0\u00A0\u00A0allowed for the creation of a Favorites page, where users can store and revisit their '],
-              ['\u00A0\u00A0\u00A0\u00A0preferred locations seamlessly. This project showcases my proficiency in full-stack '],
-              ['\u00A0\u00A0\u00A0\u00A0development and my ability to seamlessly integrate various technologies to create a '],
-              ['\u00A0\u00A0\u00A0\u00A0cohesive and feature-rich application.'],
-              ['\u00A0\u00A0\u00A0\u00A0'],
-              ['\u00A0\u00A0\u00A0\u00A0[You can explore the website in the pop up window or type "cd project 2" to open it in a new tab]'],
-            ])
-            setUrl('https://weatherapp-ga.fly.dev/')
-            setIframe(true)
-            setDownload(null)
-            return true
-
           case 'cd project 2':
             setText([...text,
               ['cd project 2'],
             ])
-            newTab('https://weatherapp-ga.fly.dev/')
+            newTab('https://handshakee.netlify.app')
             setDownload(null)
             return true
 

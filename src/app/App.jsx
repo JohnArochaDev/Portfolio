@@ -8,6 +8,8 @@ import safePass from '../videos/safePass.mp4';
 export default function App() {
   const [url, setUrl] = useState('https://gifer.com/embed/fzNE'); //this is the default url to hide the blank space
   const [iFrame, setIframe] = useState(null) //this allows the iframe to be set from the terminal
+  const [videoType, setVideoType] = useState(false) // switches the xp window to a youtube one
+  const [video, setVideo] = useState('')
   const [focus, setFocus] = useState(true) // this is to focus the input in the terminal
 
   useEffect(() => {
@@ -24,14 +26,18 @@ export default function App() {
       iFrame={iFrame}
       url={url}
       setUrl={setUrl}
+      setVideoType={setVideoType}
+      setVideo={setVideo}
       />
       <WindowsXP
-      videoType={true}
-      video={safePass}
+      videoType={videoType}
+      video={video}
       setUrl={setUrl}
       url={url}
       iFrame={iFrame}
       setIframe={setIframe}
+      setVideo={setVideo}
+      setVideoType={setVideoType}
       />
     </div>
   );
