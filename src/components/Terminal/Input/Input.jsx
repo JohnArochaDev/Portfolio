@@ -29,6 +29,10 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
     window.open(url, "_blank")
   }
 
+  function addToClipbboard(text) {
+    navigator.clipboard.writeText(text)
+  } 
+
   function checkCode(userInput) {
       userInput.find((code) => {
         switch (code) {
@@ -52,21 +56,23 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setText([...text, 
               ['ls'],
               ['\u00A0\u00A0'],
-              ['about me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- A little about me and my skills'],
-              ['help \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display help'],
-              ['ls \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display all commands'],
-              ['project 1 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 1'],
-              ['project 2 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 2'],
-              ['project 3 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3'],
-              ['project 4 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 4'],
+              ['about me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- A little about me and my skills'],
+              ['help \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display help'],
+              ['ls \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display all commands'],
+              ['project 1 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- open project 1'],
+              ['project 2 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- open project 2'],
+              ['project 3 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3'],
+              ['project 4 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- open project 4'],
               ['cd project 2 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 2 in a new tab'],
               ['cd project 3 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3 in a new tab'],
-              ['linkedin \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my LinkedIn'],
-              ['github \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my GitHub'],
-              ['email \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- email me'],
-              ['contact \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me'],
-              ['npm i \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
-              ['clear \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- clear console'],
+              ['linkedin \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my LinkedIn'],
+              ['github \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my GitHub'],
+              ['email \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- email me'],
+              ['contact \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me'],
+              ['npm i \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
+              ['cp phone \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- copy phone number'],
+              ['cp email \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- copy email'],
+              ['clear \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- clear console'],
             ])
             setDownload(null)
             return true
@@ -272,8 +278,24 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             newTab('https://www.linkedin.com/in/johnarocha/')
             setDownload(null)
             return true
+          
+          case 'cp phone':
+            addToClipbboard('(713) 550-4133')
+            setText([...text,
+              ['phone number copied']
+            ])
+            setDownload(null)
+            return true
 
-          case 'clear':
+          case 'cp email':
+            addToClipbboard('jparocha777@gmail.com')
+            setText([...text,
+              ['email copied']
+            ])
+            setDownload(null)
+            return true
+          
+            case 'clear':
             setCompletedTexts(['If you feel lost type: help'])
             setText(['If you feel lost type: help'])
             setCurrentText('')
