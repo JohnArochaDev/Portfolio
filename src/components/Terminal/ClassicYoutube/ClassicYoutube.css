@@ -1,9 +1,9 @@
 .classicYoutube {
   width: 98.7%; /* Relative width to the parent div */
-  height: 102%; /* Set height to fill remaining space within parent div */
+  height: calc(100% - 35%); /* Set height to fill remaining space within parent div */
   border: none;
   box-sizing: border-box;
   position: absolute;
-  top: 10%; /* Adjust according to your layout */
+  top: 24.7%; /* Adjust according to your layout */
   overflow: hidden;
 }
