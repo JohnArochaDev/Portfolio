@@ -214,7 +214,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
 
           case 'email':
             setText([...text, ['email']])
-            window.open('https://mail.google.com/mail/?view=cm&fs=1&to=jparocha777@gmail.com', '_blank');
+            window.open('https://mail.google.com/mail/?view=cm&fs=1&to=jparocha777@gmail.com&su=Your%20Hired!', '_blank');
             setDownload(null)
             return true
 
