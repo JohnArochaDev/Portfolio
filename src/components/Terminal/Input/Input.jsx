@@ -29,9 +29,9 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
     window.open(url, "_blank")
   }
 
-  function addToClipbboard(text) {
-    navigator.clipboard.writeText(text)
-  } 
+  // function addToClipbboard(text) {
+  //   navigator.clipboard.writeText(text)
+  // } 
 
   function checkCode(userInput) {
       userInput.find((code) => {
