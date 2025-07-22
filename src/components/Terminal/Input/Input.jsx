@@ -29,17 +29,17 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
   }
 
   function checkCode(userInput) {
-      userInput.find((code) => {//this finds the users input and checks it against the codes
+      userInput.find((code) => {
         switch (code) {
           case 'help':
             setText([...text, 
               ['help'],
               ['\u00A0\u00A0'],
               ["\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Welcome to my virtual command center! This mock terminal is your gateway to"],
-              ["\u00A0\u00A0\u00A0exploring my digital portfolio. Type 'about me' to learn more about me, or "],
-              ["\u00A0\u00A0\u00A0navigate through my work and background. Whether you're interested in viewing my "],
+              ["\u00A0\u00A0\u00A0exploring my digital portfolio. Type 'about me' to learn about me, or "],
+              ["\u00A0\u00A0\u00A0navigate through my work and background. Weather you're interested in viewing my "],
               ["\u00A0\u00A0\u00A0projects, learning more about me, or getting in touch, this "],
-              ["\u00A0\u00A0\u00A0interactive platform is designed to showcase my journey as a full-stack web developer "],
+              ["\u00A0\u00A0\u00A0interactive platform is designed to showcase my journey as a full-stack software engineer "],
               ["\u00A0\u00A0\u00A0and former 3D artist. Dive in and enjoy the personalized experience!"],
               ["\u00A0\u00A0\u00A0"],
               ["\u00A0\u00A0\u00A0Type 'ls' to see all available commands"],
