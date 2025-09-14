@@ -222,7 +222,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             return true
 
           case 'npm i dndice':
-            setText([...text,['npm i'], ['would you like to download DnDice? [yes/no]']])
+            setText([...text,['npm i'], ['would you like to download DnDice? [y/n]']])
             setDownloadApk(true)
             setDownload(null)
             return true
