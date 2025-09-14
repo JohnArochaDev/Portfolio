@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useRef } from 'react';
 import  fileSaver from 'file-saver';
 import safePass from '../../../videos/safePass.mp4'
+import dnDice from '../../../videos/dnDice.mp4'
 import './Input.css'
 
 export default function Input({ setIframe, setUrl, text, setText, userInput, setUserInput, setCompletedTexts, setCurrentText, setArrayIndex,setStringIndex, setCharIndex, setVideoType, setVideo}) {
@@ -59,12 +60,10 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['about me \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- A little about me and my skills'],
               ['help \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display help'],
               ['ls \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- display all commands'],
-              ['project 1 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- open project 1'],
-              ['project 2 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- open project 2'],
-              ['project 3 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3'],
-              ['project 4 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- open project 4'],
-              ['cd project 2 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 2 in a new tab'],
-              ['cd project 3 \u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3 in a new tab'],
+              ['cd project 1 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- open project 1'],
+              ['cd project 2 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- open project 2'],
+              ['cd project 3 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- open project 3'],
+              ['cd project 4 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- open project 4'],
               ['linkedin \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my LinkedIn'],
               ['github \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- check out my GitHub'],
               ['email \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- email me'],
@@ -77,13 +76,33 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setDownload(null)
             return true
 
-          case 'project 1':
+          case 'cd project 1':
             setText([...text,
-              ['project 1'],
+              ['cd project 1'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
+              ['\u00A0\u00A0\u00A0\u00A0Project 1: DnDice, TS, JS, React, React Native, Three.js, Cannon.js, Blender'], 
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my first project I made an app called DnDice (android only). It uses Typescript, React, React Native,'],
+              ['\u00A0\u00A0\u00A0\u00A0Expo, Three.js, Cannon.js, Blender, other various libraries. This app is a fun little dice roller. It uses physics to'],
+              ['\u00A0\u00A0\u00A0\u00A0calculate a new and random roll every time. I modeled, textured, and designed the app from start to finish. It has haptic feedback,'],
+              ['\u00A0\u00A0\u00A0\u00A0and a sleek design. My intention in making this app was to showcase my diverse skillset in 3D, various librarys, minor app development'],
+              ['\u00A0\u00A0\u00A0\u00A0and typescript. This is my first app, and i loved working on it. This one broke my brain a time or two. If you\'d like to download it for'],
+              ['\u00A0\u00A0\u00A0\u00A0yourself, try the cmd \'npm i dndice\'!'],
+            ])
+            setIframe(true)
+            setVideoType(true)
+            setVideo(dnDice)
+            setDownload(null)
+            return true
+
+
+          case 'cd project 2':
+            setText([...text,
+              ['cd project 2'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 1: SafePass Chrome extension, TS, React, Springboot'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my first project I Chrome extension called SafePass. It uses Typescript, React, Vite and '],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my second project, I made a Chrome extension called SafePass. It uses Typescript, React, Vite and '],
               ['\u00A0\u00A0\u00A0\u00A0Springboot. This application has many features, including an industry-standard encrypted database, password breech '],
               ['\u00A0\u00A0\u00A0\u00A0verification, auto saving and auto filling features, password generation, and many more features! The API includes '],
               ['\u00A0\u00A0\u00A0\u00A0 Swagger/OpenAPI documentation, account password hashing, JWT, and username and password encryption for saved passwords,  '],
@@ -97,13 +116,13 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setDownload(null)
             return true
 
-          case 'project 2':
+          case 'cd project 3':
             setText([...text,
-              ['project 2'],
+              ['cd project 3'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 2: Handshake App with MERN Stack'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my second project I made Handshake, It is a sleek job-finding app that uses the robust MERN stack.'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my third project I made Handshake, It is a sleek job-finding app that uses the robust MERN stack.'],
               ['\u00A0\u00A0\u00A0\u00A0It connects with a 3rd party API, aggregating job listings from all over the internet, including sources'],
               ['\u00A0\u00A0\u00A0\u00A0like Indeed and LinkedIn. Users can easily filter job opportunities by type. The React-based interface '],
               ['\u00A0\u00A0\u00A0\u00A0ensures a smooth, visually appealing experience. Behind the scenes, Handshake integrates with MongoDB '],
@@ -118,21 +137,13 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setDownload(null)
             return true
 
-          case 'cd project 2':
-            setText([...text,
-              ['cd project 2'],
-            ])
-            newTab('https://handshakee.netlify.app')
-            setDownload(null)
-            return true
-
-          case 'project 3':
+          case 'cd project 4':
             setText([...text, 
-              ['project 3'],
+              ['cd project 4'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0Project 3: Drink Catalog App with Django, Python, and Materialize'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my third project, I ventured into the realm of web development with Django, '],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my fourth project, I made a web project with Django, '],
               ['\u00A0\u00A0\u00A0\u00A0Python, and Materialize to create a feature-packed Drink Catalog App. Leveraging the '],
               ["\u00A0\u00A0\u00A0\u00A0power of Django's backend capabilities, I seamlessly integrated an API to curate a "],
               ['\u00A0\u00A0\u00A0\u00A0catalog featuring 636 alcoholic and non-alcoholic drinks. The application interacts '],
@@ -150,35 +161,6 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0web applications.'],
             ])
             newTab('https://drinks-app-bitter-voice-6309.fly.dev/')
-            setDownload(null)
-            return true
-
-          case 'cd project 3':
-            setText([...text,
-              ['cd project 3'],
-            ])
-            newTab('https://drinks-app-bitter-voice-6309.fly.dev/')
-            setDownload(null)
-            return true
-
-          case 'project 4':
-            setText([...text, 
-              ['project 4'],
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0Project 4: Battleship Game with JavaScript AI'],
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0In my fourth project, I delved into the realm of game development, creating a captivating '],
-              ['\u00A0\u00A0\u00A0\u00A0Battleship Game using JavaScript, CSS, and HTML. What sets this project apart is the '],
-              ['\u00A0\u00A0\u00A0\u00A0implementation of an AI opponent that elevates the gaming experience. Through '],
-              ['\u00A0\u00A0\u00A0\u00A0meticulous coding, I engineered an AI that makes educated choices when targeting '],
-              ['\u00A0\u00A0\u00A0\u00A0ships, enhancing the challenge for players. The seamless functionality of the AI creates '],
-              ['\u00A0\u00A0\u00A0\u00A0an immersive and engaging gaming environment. The Battleship Game showcases my '],
-              ['\u00A0\u00A0\u00A0\u00A0proficiency in front-end development and my ability to create not just visually '],
-              ['\u00A0\u00A0\u00A0\u00A0appealing but also intelligently designed applications. This project reflects my '],
-              ['\u00A0\u00A0\u00A0\u00A0commitment to pushing the boundaries of what can be achieved with web-based '],
-              ['\u00A0\u00A0\u00A0\u00A0games, showcasing both creativity and technical prowess.'],
-            ])
-            newTab('https://johnarochadev.github.io/Battleship/')
             setDownload(null)
             return true
 

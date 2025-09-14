@@ -1,7 +1,6 @@
 import './Terminal.css';
 import Input from './Input/Input'
 import TypingEffect from './TypingEffect/TypingEffect';
-// import { ReactTyped } from "react-typed"; May come back to this
 import { useState, useEffect } from "react";
 
 export default function Terminal({setFocus, focus, iFrame, setIframe, setUrl, url, setVideoType, setVideo}) {
@@ -19,20 +18,21 @@ export default function Terminal({setFocus, focus, iFrame, setIframe, setUrl, ur
     ['Type in a command to get started'],
     ['If you feel lost type: help']
   ])
-  const [codes, setCodes] = useState([
+  const codes = [
     ['help'],
     ['ls'],
     ['projects'],
-    ['project 1'],
-    ['project 2'],
-    ['project 3'],
+    ['cd project 1'],
+    ['cd project 2'],
+    ['cd project 3'],
+    ['cd project 4'],
     ['about me'],
     ['npm i'],
     ['hire me'],
     ['github'],
     ['linkedin'],
     ['clear'],
-  ])
+  ]
 
   useEffect(() => { //keeps the bottom of the input in view
     if (text.length > 20){
