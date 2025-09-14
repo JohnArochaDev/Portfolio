@@ -224,24 +224,21 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
           case 'npm i dndice':
             setText([...text,['npm i'], ['would you like to download DnDice? [yes/no]']])
             setDownloadApk(true)
-            return true
-
-          case 'yes':
-            if (downloadApk){
-              setDownloadApk('y')
-              setText([...text, ['Downloading...']])
-              saveFile('apk')
-            }
             setDownload(null)
-            setDownloadApk(null)
             return true
 
           case 'npm i':
             setText([...text,['npm i'], ['would you like to download my resume? [y/n]']])
             setDownload(true)
+            setDownloadApk(null)
             return true
 
-          case 'y':
+          case 'y' || 'yes':
+            if (downloadApk){
+              setDownloadApk('y')
+              setText([...text, ['Downloading...']])
+              saveFile('apk')
+            }
             if (download){
               setDownload('y')
               setText([...text, ['Downloading...']])
