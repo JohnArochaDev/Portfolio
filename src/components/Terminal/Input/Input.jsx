@@ -8,6 +8,7 @@ import './Input.css'
 export default function Input({ setIframe, setUrl, text, setText, userInput, setUserInput, setCompletedTexts, setCurrentText, setArrayIndex,setStringIndex, setCharIndex, setVideoType, setVideo}) {
 
   const [download, setDownload] = useState(null)
+  const [downloadApk, setDownloadApk] = useState(null)
 
   document.onmousedown = (e) => { // This prevents mouse clicking, just like a terminal
     e.preventDefault();
@@ -22,8 +23,13 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
     setUserInput([e.target.value])
   }
 
-  const saveFile = () => {
-    fileSaver.saveAs("/assets/John-Arocha's-Resume.pdf", "John's Resume.pdf");
+  const saveFile = (fileType) => {
+    if (fileType === 'resume') {
+      fileSaver.saveAs("/assets/John-Arocha's-Resume.pdf", "John's Resume.pdf");
+    }
+    if (fileType === 'apk') {
+      fileSaver.saveAs("/assets/DnDice.apk", "DnDice.apk");
+    }
   }
 
   function newTab(url) {
@@ -51,6 +57,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ["\u00A0\u00A0\u00A0Type 'ls' to see all available commands"],
             ])
             setDownload(null)
+            setDownloadApk(null)
             return true
 
           case 'ls':
@@ -69,11 +76,13 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['email \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- email me'],
               ['contact \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- get in touch with me'],
               ['npm i \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
+              ['npm i dndice\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- install resume'],
               // ['cp phone \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- copy phone number'],
               // ['cp email \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- copy email'],
               ['clear \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0-- clear console'],
             ])
             setDownload(null)
+            setDownloadApk(null)
             return true
 
           case 'cd project 1':
@@ -93,6 +102,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setVideoType(true)
             setVideo(dnDice)
             setDownload(null)
+            setDownloadApk(null)
             return true
 
 
@@ -114,6 +124,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setVideoType(true)
             setVideo(safePass)
             setDownload(null)
+            setDownloadApk(null)
             return true
 
           case 'cd project 3':
@@ -135,6 +146,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setUrl('https://handshakee.netlify.app')
             setIframe(true)
             setDownload(null)
+            setDownloadApk(null)
             return true
 
           case 'cd project 4':
@@ -162,6 +174,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             ])
             newTab('https://drinks-app-bitter-voice-6309.fly.dev/')
             setDownload(null)
+            setDownloadApk(null)
             return true
 
           case 'about me':
@@ -198,12 +211,29 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Other - Docker, RESTful Routing, JSON API, MERN, MEAN'],
             ])
             setDownload(null)
+            setDownloadApk(null)
             return true
 
           case 'email':
             setText([...text, ['email']])
             window.open('https://mail.google.com/mail/?view=cm&fs=1&to=jparocha777@gmail.com&su=Your%20Hired!', '_blank');
             setDownload(null)
+            setDownloadApk(null)
+            return true
+
+          case 'npm i apk':
+            setText([...text,['npm i'], ['would you like to download DnDice? [yes/no]']])
+            setDownloadApk(true)
+            return true
+
+          case 'yes':
+            if (downloadApk){
+              setDownloadApk('y')
+              setText([...text, ['Downloading...']])
+              saveFile('apk')
+            }
+            setDownload(null)
+            setDownloadApk(null)
             return true
 
           case 'npm i':
@@ -215,13 +245,15 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             if (download){
               setDownload('y')
               setText([...text, ['Downloading...']])
-              saveFile()
+              saveFile('resume')
             }
             setDownload(null)
+            setDownloadApk(null)
             return true
 
-          case 'n':
+          case 'n' || 'no':
             setDownload(null)
+            setDownloadApk(null)
             setText([...text, ['Download canceled...']])
             return true
               
@@ -239,6 +271,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0GitHub: https://github.com/JohnArochaDev  [try cmd \'github\']'],
             ])
             setDownload(null)
+            setDownloadApk(null)
             return true
 
           case 'github':
@@ -248,6 +281,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             ])
             newTab('https://github.com/JohnArochaDev')
             setDownload(null)
+            setDownloadApk(null)
             return true
 
           case 'linkedin':
@@ -258,6 +292,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             ])
             newTab('https://www.linkedin.com/in/johnarocha/')
             setDownload(null)
+            setDownloadApk(null)
             return true
           
           // case 'cp phone':
@@ -266,6 +301,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
           //     ['phone number copied']
           //   ])
           //   setDownload(null)
+          // setDownloadApk(null)
           //   return true
 
           // case 'cp email':
@@ -274,6 +310,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
           //     ['email copied']
           //   ])
           //   setDownload(null)
+          // setDownloadApk(null)
           //   return true
           
             case 'clear':
