@@ -97,13 +97,11 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0a file is selected, it displays its subsequent nodes on a canvas. Each node can be written in MD, and compiled into its stylized'],
               ['\u00A0\u00A0\u00A0\u00A0format after editing. Upon saving, a nodes location, text, and size are saved in the DB, and re-rendered whe nthe file is selected again.'],
           ])
-            setIframe(false)
-            setVideoType(false)
-            setVideo(undefined)
+            setUrl('https://www.notedexe.com')
+            setIframe(true)
             setDownload(null)
             setDownloadApk(null)
             return true
-
 
           case 'cd project 2':
             setText([...text,
