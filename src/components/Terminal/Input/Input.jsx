@@ -88,19 +88,18 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
           case 'cd project 1':
             setText([...text,
               ['cd project 1'],
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0Project 1: DnDice, TS, JS, React, React Native, Three.js, Cannon.js, Blender'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my first project I made an app called DnDice (android only). It uses Typescript, React, React Native,'],
-              ['\u00A0\u00A0\u00A0\u00A0Expo, Three.js, Cannon.js, Blender, other various libraries. This app is a fun little dice roller. It uses physics to'],
-              ['\u00A0\u00A0\u00A0\u00A0calculate a new and random roll every time. I modeled, textured, and designed the app from start to finish. It has haptic feedback,'],
-              ['\u00A0\u00A0\u00A0\u00A0and a sleek design. My intention in making this app was to showcase my diverse skillset in 3D, various librarys, minor app development'],
-              ['\u00A0\u00A0\u00A0\u00A0and typescript. This is my first app, and i loved working on it. This one broke my brain a time or two. If you\'d like to download it for'],
-              ['\u00A0\u00A0\u00A0\u00A0yourself, try the cmd \'npm i dndice\'!'],
-            ])
-            setIframe(true)
-            setVideoType(true)
-            setVideo(dnDice)
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0'],
+              ['\u00A0\u00A0\u00A0\u00A0Project 1: Noted.exe, TS, Java, SQL, React, Springboot'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my first project I made s web app called Noted.exe. It designed it to fill a need in my personal life where'],
+              ['\u00A0\u00A0\u00A0\u00A0about I needed a way to organize and strucure my data, notes, and instructional files ive made over the years. The project has a '],   
+              ['\u00A0\u00A0\u00A0\u00A0folder - file hierarchical structure. A folder can have many files and many folders, but a file must be owned by a folder. Once'],
+              ['\u00A0\u00A0\u00A0\u00A0a file is selected, it displays its subsequent nodes on a canvas. Each node can be written in MD, and compiled into its stylized'],
+              ['\u00A0\u00A0\u00A0\u00A0format after editing. Upon saving, a nodes location, text, and size are saved in the DB, and re-rendered whe nthe file is selected again.'],
+          ])
+            setIframe(false)
+            setVideoType(false)
+            setVideo(undefined)
             setDownload(null)
             setDownloadApk(null)
             return true
@@ -110,7 +109,7 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setText([...text,
               ['cd project 2'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0Project 1: SafePass Chrome extension, TS, React, Springboot'], 
+              ['\u00A0\u00A0\u00A0\u00A0Project 2: SafePass Chrome extension, TS, React, Springboot'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my second project, I made a Chrome extension called SafePass. It uses Typescript, React, Vite and '],
               ['\u00A0\u00A0\u00A0\u00A0Springboot. This application has many features, including an industry-standard encrypted database, password breech '],
@@ -131,7 +130,26 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             setText([...text,
               ['cd project 3'],
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0Project 2: Handshake App with MERN Stack'], 
+              ['\u00A0\u00A0\u00A0\u00A0Project 3: DnDice, TS, JS, React, React Native, Three.js, Cannon.js, Blender'], 
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my first project I made an app called DnDice (android only). It uses Typescript, React, React Native,'],
+              ['\u00A0\u00A0\u00A0\u00A0Expo, Three.js, Cannon.js, Blender, other various libraries. This app is a fun little dice roller. It uses physics to'],
+              ['\u00A0\u00A0\u00A0\u00A0calculate a new and random roll every time. I modeled, textured, and designed the app from start to finish. It has haptic feedback,'],
+              ['\u00A0\u00A0\u00A0\u00A0and a sleek design. My intention in making this app was to showcase my diverse skillset in 3D, various librarys, minor app development'],
+              ['\u00A0\u00A0\u00A0\u00A0and typescript. This is my first app, and i loved working on it. This one broke my brain a time or two. If you\'d like to download it for'],
+              ['\u00A0\u00A0\u00A0\u00A0yourself, try the cmd \'npm i dndice\'!'],
+            ])
+            setUrl('https://www.notedexe.com')
+            setIframe(true)
+            setDownload(null)
+            setDownloadApk(null)
+            return true
+
+          case 'cd project 4':
+            setText([...text,
+              ['cd project 4'],
+              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
+              ['\u00A0\u00A0\u00A0\u00A0Project 4: Handshake App with MERN Stack'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
               ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my third project I made Handshake, It is a sleek job-finding app that uses the robust MERN stack.'],
               ['\u00A0\u00A0\u00A0\u00A0It connects with a 3rd party API, aggregating job listings from all over the internet, including sources'],
@@ -145,34 +163,6 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
             ])
             setUrl('https://handshakee.netlify.app')
             setIframe(true)
-            setDownload(null)
-            setDownloadApk(null)
-            return true
-
-          case 'cd project 4':
-            setText([...text, 
-              ['cd project 4'],
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0Project 3: Drink Catalog App with Django, Python, and Materialize'],
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0'], 
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0For my fourth project, I made a web project with Django, '],
-              ['\u00A0\u00A0\u00A0\u00A0Python, and Materialize to create a feature-packed Drink Catalog App. Leveraging the '],
-              ["\u00A0\u00A0\u00A0\u00A0power of Django's backend capabilities, I seamlessly integrated an API to curate a "],
-              ['\u00A0\u00A0\u00A0\u00A0catalog featuring 636 alcoholic and non-alcoholic drinks. The application interacts '],
-              ['\u00A0\u00A0\u00A0\u00A0with a PostgreSQL database, providing a robust foundation for storing and managing '],
-              ['\u00A0\u00A0\u00A0\u00A0drink data. Using the DTL template language, I designed a sleek and intuitive interface'],
-              ['\u00A0\u00A0\u00A0\u00A0that not only displays comprehensive information about each drink, including '],
-              ['\u00A0\u00A0\u00A0\u00A0ingredients and preparation instructions but also incorporates user authentication for '],
-              ['\u00A0\u00A0\u00A0\u00A0a personalized experience.'],
-              ['\u00A0\u00A0\u00A0\u00A0'],
-              ['\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0One standout feature of this app is its user-centric approach – users can save their '],
-              ['\u00A0\u00A0\u00A0\u00A0favorite drinks to a personalized database, allowing them to customize recipes and '],
-              ['\u00A0\u00A0\u00A0\u00A0generate convenient shopping lists for crafting their preferred beverages. This project '],
-              ['\u00A0\u00A0\u00A0\u00A0highlights my expertise in backend development, database management, and user'],
-              ['\u00A0\u00A0\u00A0\u00A0authentication, demonstrating my commitment to creating engaging and practical '],
-              ['\u00A0\u00A0\u00A0\u00A0web applications.'],
-            ])
-            newTab('https://drinks-app-bitter-voice-6309.fly.dev/')
             setDownload(null)
             setDownloadApk(null)
             return true
