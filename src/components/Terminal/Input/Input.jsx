@@ -137,8 +137,9 @@ export default function Input({ setIframe, setUrl, text, setText, userInput, set
               ['\u00A0\u00A0\u00A0\u00A0and typescript. This is my first app, and i loved working on it. This one broke my brain a time or two. If you\'d like to download it for'],
               ['\u00A0\u00A0\u00A0\u00A0yourself, try the cmd \'npm i dndice\'!'],
             ])
-            setUrl('https://www.notedexe.com')
             setIframe(true)
+            setVideoType(true)
+            setVideo(dnDice)
             setDownload(null)
             setDownloadApk(null)
             return true
